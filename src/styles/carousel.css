@@ -1,0 +1,29 @@
+.main-carousel {
+	background: linear-gradient(to right,
+			#a2ffff 0%,
+			#ccffff 30%,
+			#ccffff 70%,
+			#a2ffff 100%);
+}
+
+.carousel-indicators {
+	margin-bottom: 2rem;
+}
+
+.carousel-indicators button[type="button"] {
+	background-color: #00ffff;
+}
+
+.carousel-indicators button[type="button"].active {
+	background-color: #8a8bd4;
+}
+
+.carousel-control-prev>i,
+.carousel-control-next>i {
+	color: #00ffff;
+}
+
+.carousel-control-prev:active>i,
+.carousel-control-next:active>i {
+	color: #8a8bd4;
+}

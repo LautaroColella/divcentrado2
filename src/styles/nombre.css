@@ -1,0 +1,23 @@
+svg text {
+	font-family: Lora;
+	letter-spacing: 0.5vw;
+	stroke: #8a8bd4;
+	font-size: 5vw;
+	font-weight: 700;
+	stroke-width: 0.2vw;
+	animation: nameAnimation 5s infinite alternate;
+}
+
+@keyframes nameAnimation {
+	0% {
+		stroke-dasharray: 0 50%;
+		stroke-dashoffset: 10%;
+		fill: #008d8d
+	}
+
+	100% {
+		stroke-dasharray: 10% 0;
+		stroke-dashoffset: -10%;
+		fill: #008d8d00
+	}
+}
