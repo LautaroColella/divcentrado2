@@ -1,5 +1,6 @@
 import { Navigate, Route, Routes } from "react-router-dom";
 import CarouselWrapper from "./components/CarouselWrapper";
+import NotFound from "./pages/NotFound";
 import Cristian from "./pages/profile/Cristian";
 import Lautaro from "./pages/profile/Lautaro";
 import Paola from "./pages/profile/Paola";
@@ -22,7 +23,7 @@ export default function AppRouter() {
       <Route path="/perfil/silvana" element={<Silvana />} />
       <Route path="/perfil/paola" element={<Paola />} />
 
-      <Route path="*" element={<Navigate to="/nombre" replace />} />
+      <Route path="*" element={<NotFound />} />
     </Routes>
   );
 }
