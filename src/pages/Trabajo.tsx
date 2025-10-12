@@ -249,7 +249,7 @@ export default function Trabajo() {
   return (
     <div className="d-flex flex-column align-items-center h-100">
       <div id="second-slide-title">
-        <h2>Trabajo y proyecto</h2>
+        <h2>Forma de Trabajo</h2>
       </div>
       <div className="circle-container mt-auto mb-auto">
         <Circle
