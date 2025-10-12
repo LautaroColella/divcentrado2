@@ -1,7 +1,7 @@
 import * as bootstrap from "bootstrap";
 import { useEffect, useRef, useState } from "react";
+import Circle from "../components/Circle";
 import "../styles/trabajo.css";
-import Circle from "./Circle";
 
 export default function Trabajo() {
   const propositoRef = useRef<HTMLDivElement>(null);

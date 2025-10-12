@@ -1,5 +1,5 @@
 import { Navigate, Route, Routes } from "react-router-dom";
-import CarouselWrapper from "./pages/CarouselWrapper";
+import CarouselWrapper from "./components/CarouselWrapper";
 import Cristian from "./pages/profile/Cristian";
 import Lautaro from "./pages/profile/Lautaro";
 import Paola from "./pages/profile/Paola";
