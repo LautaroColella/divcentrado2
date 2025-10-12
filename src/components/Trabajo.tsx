@@ -233,6 +233,18 @@ export default function Trabajo() {
       });
     });
   }, []);
+  /*
+    Actualmente los tooltips en mobile estan bugueados.
+    Probe varias cosas diferentes para fixearlos, pero es un problema de bootstrap:
+    "Triggering tooltips on hidden elements will not work."
+    "Tooltips must be hidden before their corresponding elements have been removed from the DOM."
+    https://getbootstrap.com/docs/5.0/components/tooltips/
+
+    Logré fixearlo en la página estática pero acá es más dificil por un tema de componentes.
+    Capaz con este useEffect se puede pasar una dependencia al array de forma tal que solo se inicie
+    el tooltip si los iconos existen (display != none), solo si se muestra el contenido del back.
+    Y teniendo en cuenta el estado con useState se podria hacer dispose de los que sigan activos.
+  */
 
   return (
     <div className="d-flex flex-column align-items-center h-100">
