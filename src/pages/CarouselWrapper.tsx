@@ -10,7 +10,7 @@ import Trabajo from "../components/Trabajo";
 
 const slides = [
   { component: <Nombre />, path: "/nombre", title: "Portada | DIVCENTRADO" },
-  { component: <Trabajo />, path: "/trabajo", title: "Proyecto | DIVCENTRADO" },
+  { component: <Trabajo />, path: "/trabajo", title: "Trabajo | DIVCENTRADO" },
   { component: <Perfil />, path: "/perfil", title: "Perfil | DIVCENTRADO" },
   {
     component: <Bitacora />,
