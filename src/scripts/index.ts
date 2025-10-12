@@ -1,5 +1,3 @@
-console.log("works");
-
 // Scripts para la segunda slide
 let iconTooltips = [];
 let tooltipTimeouts = [];
@@ -169,9 +167,8 @@ metodoCircle.addEventListener("click", (e) => {
 
   // Se hace pequeño hacia donde se clickeo
   metodoCircle.style.transition = "transform 0.4s ease";
-  metodoCircle.style.transformOrigin = `${50 + (clickX / rect.width) * 100}% ${
-    50 + (clickY / rect.height) * 100
-  }%`;
+  metodoCircle.style.transformOrigin = `${50 + (clickX / rect.width) * 100}% ${50 + (clickY / rect.height) * 100
+    }%`;
   metodoCircle.style.transform = "scale(0.05)";
 
   setTimeout(() => {
