@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
 
 export interface Developer {
   name: string;
@@ -18,6 +19,11 @@ export interface Project {
 }
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
+  const [modalImage, setModalImage] = useState<string | null>(null);
+
+  const openModal = (src: string) => setModalImage(src);
+  const closeModal = () => setModalImage(null);
+
   return (
     <div className="card h-100 shadow-sm border-0">
       {project.screenshots && project.screenshots.length > 0 && (
@@ -37,7 +43,12 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                   src={src}
                   className="d-block w-100"
                   alt={`${project.title} screenshot ${index + 1}`}
-                  style={{ objectFit: "cover", height: "200px" }}
+                  style={{
+                    objectFit: "cover",
+                    height: "200px",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => openModal(src)}
                 />
               </div>
             ))}
@@ -102,6 +113,36 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
         <div>Equipo {project.id}</div>
         <div>{project.finish_date}</div>
       </div>
+      {modalImage &&
+        ReactDOM.createPortal(
+          <div
+            className="modal show d-block"
+            tabIndex={-1}
+            style={{ backgroundColor: "rgba(0,0,0,0.8)" }}
+            onClick={closeModal}
+          >
+            <div
+              className="modal-dialog modal-dialog-centered modal-lg"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="modal-content bg-transparent border-0">
+                <div className="modal-body p-0">
+                  <img
+                    src={modalImage}
+                    className="img-fluid"
+                    alt="Full size"
+                    style={{
+                      width: "100%",
+                      maxHeight: "80vh",
+                      objectFit: "contain",
+                    }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>,
+          document.body
+        )}
     </div>
   );
 };
