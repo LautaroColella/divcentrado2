@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
+import "../styles/carousel.css";
+
 import Bitacora from "../components/Bitacora";
 import Nombre from "../components/Nombre";
 import Perfil from "../components/Perfil";

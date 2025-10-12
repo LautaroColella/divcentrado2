@@ -1,4 +1,3 @@
-import "../styles/carousel.css";
 import "../styles/trabajo.css";
 
 export default function Trabajo() {

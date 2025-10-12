@@ -1,4 +1,3 @@
-import "../styles/carousel.css";
 import "../styles/nombre.css";
 
 export default function Nombre() {

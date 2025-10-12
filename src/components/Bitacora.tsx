@@ -1,5 +1,4 @@
 import "../styles/bitacora.css";
-import "../styles/carousel.css";
 
 export default function Bitacora() {
   return (
