@@ -1,16 +1,22 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
+import "../styles/carousel.css";
+
 import Bitacora from "../components/Bitacora";
 import Nombre from "../components/Nombre";
 import Perfil from "../components/Perfil";
 import Trabajo from "../components/Trabajo";
 
 const slides = [
-  { component: <Nombre />, path: "/nombre" },
-  { component: <Trabajo />, path: "/trabajo" },
-  { component: <Perfil />, path: "/perfil" },
-  { component: <Bitacora />, path: "/bitacora" },
+  { component: <Nombre />, path: "/nombre", title: "Portada | DIVCENTRADO" },
+  { component: <Trabajo />, path: "/trabajo", title: "Proyecto | DIVCENTRADO" },
+  { component: <Perfil />, path: "/perfil", title: "Perfil | DIVCENTRADO" },
+  {
+    component: <Bitacora />,
+    path: "/bitacora",
+    title: "Bitácora | DIVCENTRADO",
+  },
 ];
 
 export default function CarouselWrapper() {
@@ -27,6 +33,10 @@ export default function CarouselWrapper() {
       setIndex((prevIndex) => (prevIndex !== i ? i : prevIndex));
     }
   }, [location.pathname]);
+
+  useEffect(() => {
+    document.title = slides[index].title;
+  }, [index]);
 
   const next = () => {
     const newIndex = (index + 1) % slides.length;
