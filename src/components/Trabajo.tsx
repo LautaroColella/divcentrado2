@@ -1,6 +1,7 @@
 import * as bootstrap from "bootstrap";
 import { useEffect, useRef, useState } from "react";
 import "../styles/trabajo.css";
+import Circle from "./Circle";
 
 export default function Trabajo() {
   const propositoRef = useRef<HTMLDivElement>(null);
@@ -239,65 +240,58 @@ export default function Trabajo() {
         <h2>Trabajo y proyecto</h2>
       </div>
       <div className="circle-container mt-auto mb-auto">
-        <div
-          className="circle"
+        <Circle
           id="circle-proposito"
-          ref={propositoRef}
+          frontContent="Propósito"
+          backContent="Buscamos crear una página que muestre lo que aprendimos y cómo trabajamos juntos"
           onClick={handlePropositoClick}
-        >
-          <div className="circle-front" ref={propositoFrontRef}>
-            Propósito
-          </div>
-          <div className="circle-back" ref={propositoBackRef}>
-            Buscamos crear una página que muestre lo que aprendimos y cómo
-            trabajamos juntos
-          </div>
-        </div>
+          ref={propositoRef}
+          frontRef={propositoFrontRef}
+          backRef={propositoBackRef}
+        />
 
-        <div
-          className="circle"
+        <Circle
           id="circle-valores"
-          ref={valoresRef}
+          frontContent="Valores"
+          backContent={
+            <>
+              <i
+                className="fa-solid fa-graduation-cap"
+                data-bs-toggle="tooltip"
+                title="Aprendemos mientras diseñamos y programamos, mejorando nuestras habilidades"
+              ></i>
+              <i
+                className="fa-solid fa-calendar-check"
+                data-bs-toggle="tooltip"
+                title="Nos aseguramos de cumplir con los plazos y mantener la calidad del trabajo"
+              ></i>
+              <i
+                className="fa-solid fa-handshake"
+                data-bs-toggle="tooltip"
+                title="Colaboramos para que cada parte del proyecto funcione a la perfección"
+              ></i>
+              <i
+                className="fa-solid fa-lightbulb"
+                data-bs-toggle="tooltip"
+                title="Buscamos ideas originales para que la página sea visual y atractiva"
+              ></i>
+            </>
+          }
           onClick={handleValoresClick}
-        >
-          <div className="circle-front">Valores</div>
-          <div className="circle-back">
-            <i
-              className="fa-solid fa-graduation-cap"
-              data-bs-toggle="tooltip"
-              title="Aprendemos mientras diseñamos y programamos, mejorando nuestras habilidades"
-            ></i>
-            <i
-              className="fa-solid fa-calendar-check"
-              data-bs-toggle="tooltip"
-              title="Nos aseguramos de cumplir con los plazos y mantener la calidad del trabajo"
-            ></i>
-            <i
-              className="fa-solid fa-handshake"
-              data-bs-toggle="tooltip"
-              title="Colaboramos para que cada parte del proyecto funcione a la perfección"
-            ></i>
-            <i
-              className="fa-solid fa-lightbulb"
-              data-bs-toggle="tooltip"
-              title="Buscamos ideas originales para que la página sea visual y atractiva"
-            ></i>
-          </div>
-        </div>
-        <div
-          className="circle"
+          ref={valoresRef}
+          frontRef={undefined}
+          backRef={undefined}
+        />
+
+        <Circle
           id="circle-metodo"
-          ref={metodoRef}
+          frontContent="Método"
+          backContent="Trabajamos juntos dividiendo tareas, revisando cada sección y asegurando que la página sea funcional y atractiva"
           onClick={handleMetodoClick}
-        >
-          <div className="circle-front" ref={metodoFrontRef}>
-            Método
-          </div>
-          <div className="circle-back" ref={metodoBackRef}>
-            Trabajamos juntos dividiendo tareas, revisando cada sección y
-            asegurando que la página sea funcional y atractiva
-          </div>
-        </div>
+          ref={metodoRef}
+          frontRef={metodoFrontRef}
+          backRef={metodoBackRef}
+        />
       </div>
     </div>
   );
