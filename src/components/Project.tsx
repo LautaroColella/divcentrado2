@@ -13,8 +13,6 @@ export interface Project {
   github_link: string;
   deploy_link: string;
   technologies: string[];
-  liked: string[];
-  could_be_better: string[];
   screenshots: string[];
   finish_date: string;
 }
@@ -78,24 +76,6 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
               </span>
             ))}
           </div>
-        </div>
-
-        <div className="mb-2">
-          <strong>Cosas que nos gustaron</strong>
-          <ul className="mb-0">
-            {project.liked.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
-        </div>
-
-        <div className="mb-3">
-          <strong>Cosas que se podrian mejorar</strong>
-          <ul className="mb-0">
-            {project.could_be_better.map((item, i) => (
-              <li key={i}>{item}</li>
-            ))}
-          </ul>
         </div>
 
         <div className="d-flex justify-content-between align-items-center">
