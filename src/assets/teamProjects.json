@@ -362,7 +362,7 @@
   {
     "id": 14,
     "title": "Grupo 14",
-    "description": "Como grupo estamos entusiasmados por aprender a utilizar nuevas tecnologias.",
+    "description": "Como grupo estamos entusiasmados por aprender a utilizar nuevas tecnologias. Es por eso que desarrollamos este sitio web colaborativo.",
     "developers": [
       {
         "name": "Leandro Ezequiel Aballone",
@@ -423,7 +423,7 @@
   {
     "id": 16,
     "title": "Reactivos",
-    "description": "El enfoque de este proyecto es darnos a conocer con nuestros compañeros y crecer como profesionales mientras participamos durante el proyecto, fomentando la colaboración, la innovación y la mejora continua.",
+    "description": "El enfoque de este proyecto es darnos a conocer con nuestros compañeros y crecer como profesionales mientras participamos durante el proyecto.",
     "developers": [
       { "name": "Avalos", "github": "https://github.com/sanavalos" },
       { "name": "Facundo", "github": "https://github.com/FacundoAreo" },
