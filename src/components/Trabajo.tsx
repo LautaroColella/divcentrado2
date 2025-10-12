@@ -1,3 +1,6 @@
+import "../styles/carousel.css";
+import "../styles/trabajo.css";
+
 export default function Trabajo() {
   return (
     <div className="d-flex flex-column align-items-center h-100">
