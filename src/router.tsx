@@ -16,6 +16,7 @@ export default function AppRouter() {
       <Route path="/trabajo" element={<CarouselWrapper />} />
       <Route path="/perfil" element={<CarouselWrapper />} />
       <Route path="/bitacora" element={<CarouselWrapper />} />
+      <Route path="/proyectos" element={<CarouselWrapper />} />
 
       <Route path="/perfil/lautaro" element={<Lautaro />} />
       <Route path="/perfil/cristian" element={<Cristian />} />

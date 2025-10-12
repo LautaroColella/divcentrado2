@@ -1,0 +1,365 @@
+[
+  {
+    "id": 1,
+    "title": "NextHire - Devs",
+    "description": "A través de este proyecto buscamos consolidar competencias técnicas, fomentar el trabajo en equipo y sentar las bases para nuestra futura inserción en la industria tecnológica.",
+    "developers": [
+      {
+        "name": "Hernan Andrés Burgos ",
+        "github": "https://github.com/burgosha"
+      },
+      {
+        "name": "Nicolás Chiovetta",
+        "github": "https://github.com/nicochiove"
+      },
+      {
+        "name": "Adrián Agustín Leroy Delgado",
+        "github": "https://github.com/DragonesMagicos"
+      },
+      { "name": "Leonel Donnet", "github": "https://github.com/LeonelDonnet" },
+      { "name": "Luisina Muller", "github": "https://github.com/luisimuller" }
+    ],
+    "github_link": "https://github.com/luisimuller/TP1-Para-Entregar.git",
+    "deploy_link": "https://ifts29-frontend2025-coma-grupo1-tp1.vercel.app",
+    "technologies": ["HTML", "CSS", "JavaScript", "Google Fonts"],
+    "liked": ["", ""],
+    "could_be_better": ["", ""],
+    "screenshots": [
+      "https://i.imgur.com/u8BDPAS.png",
+      "https://i.imgur.com/LbcTirw.png",
+      "https://i.imgur.com/rzQDp8h.png",
+      "https://i.imgur.com/P4yzBWI.png",
+      "https://i.imgur.com/yqPDs2Y.png",
+      "https://i.imgur.com/W3wfpJR.png",
+      "https://i.imgur.com/sBQZuFe.png"
+    ],
+    "finish_date": "2025-09-21"
+  },
+  {
+    "id": 2,
+    "title": "GRUPO DOS",
+    "description": "El objetivo es aplicar HTML, CSS y JavaScript en la construcción de un sitio con diseño adaptable y funciones dinámicas que enriquezcan la experiencia del usuario.",
+    "developers": [
+      {
+        "name": "Daniel Ignacio Córdoba",
+        "github": "https://github.com/Kayjura"
+      },
+      { "name": "Cecilia Gómez", "github": "https://github.com/cesugomez" },
+      {
+        "name": "Mariela Belén Giménez",
+        "github": "https://github.com/BelenGz"
+      },
+      { "name": "Eugenia Lucchelli", "github": "https://github.com/eugelu11" },
+      { "name": "Román Ríos", "github": "https://github.com/romanrios" }
+    ],
+    "github_link": "https://github.com/romanrios/ifts-front-tp1",
+    "deploy_link": "https://ifts-front-tp1.vercel.app",
+    "technologies": ["HTML", "CSS", "JavaScript", "Google Fonts"],
+    "liked": ["", ""],
+    "could_be_better": ["", ""],
+    "screenshots": [
+      "https://i.imgur.com/QNt3lct.png",
+      "https://i.imgur.com/yI8TkYl.jpeg",
+      "https://i.imgur.com/5lOAbQC.png",
+      "https://i.imgur.com/MIvwWDR.jpeg",
+      "https://i.imgur.com/KGDWmho.png",
+      "https://i.imgur.com/Ihtl2Zj.png",
+      "https://i.imgur.com/ztnAkYW.png"
+    ],
+    "finish_date": "2025-09-20"
+  },
+  {
+    "id": 3,
+    "title": "Grupo 3",
+    "description": "Nuestro objetivo es crear un sitio organizado, responsive y con interactividad usando HTML, CSS y JavaScript.",
+    "developers": [
+      { "name": "Germán", "github": "https://github.com/germanberisso" },
+      { "name": "Juan", "github": "https://github.com/juandualibe" },
+      { "name": "Manuel", "github": "https://github.com/jmgasbarro" },
+      { "name": "Nicolas", "github": "https://github.com/NicolasWeibel" }
+    ],
+    "github_link": "https://github.com/germanberisso/FrontendTP01",
+    "deploy_link": "https://frontend-tp-01-pink.vercel.app",
+    "technologies": ["HTML", "CSS", "JavaScript", "Google Fonts", "CSS BEM"],
+    "liked": ["", ""],
+    "could_be_better": ["", ""],
+    "screenshots": [
+      "https://i.imgur.com/kJB5agf.png",
+      "https://i.imgur.com/NFXL2lZ.png",
+      "https://i.imgur.com/V3ZCq8X.png",
+      "https://i.imgur.com/FYUuYDo.png",
+      "https://i.imgur.com/LkEAi2F.png",
+      "https://i.imgur.com/RuBJ3mf.png",
+      "https://i.imgur.com/Ef2ftl6.png",
+      "https://i.imgur.com/fxSiCSO.png",
+      "https://i.imgur.com/6LrDrGR.png"
+    ],
+    "finish_date": "2025-09-22"
+  },
+  {
+    "id": 5,
+    "title": "",
+    "description": "",
+    "developers": [
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" }
+    ],
+    "github_link": "https://github.com/SchallmoserJuan/LegoDevs",
+    "deploy_link": "https://lego-devs.vercel.app/index.html",
+    "technologies": ["", ""],
+    "liked": ["", ""],
+    "could_be_better": ["", ""],
+    "screenshots": ["https://via.placeholder.com/600x400", "", ""],
+    "finish_date": "2024-05-15"
+  },
+  {
+    "id": 6,
+    "title": "",
+    "description": "",
+    "developers": [
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" }
+    ],
+    "github_link": "https://github.com/CariRodrigues/Frontend2025",
+    "deploy_link": "https://frontend2025-five.vercel.app",
+    "technologies": ["", ""],
+    "liked": ["", ""],
+    "could_be_better": ["", ""],
+    "screenshots": ["https://via.placeholder.com/600x400", "", ""],
+    "finish_date": "2024-05-15"
+  },
+  {
+    "id": 7,
+    "title": "",
+    "description": "",
+    "developers": [
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" }
+    ],
+    "github_link": "https://github.com/ignatole/primera-entrega-fe",
+    "deploy_link": "https://primera-entrega-fe.vercel.app",
+    "technologies": ["", ""],
+    "liked": ["", ""],
+    "could_be_better": ["", ""],
+    "screenshots": ["https://via.placeholder.com/600x400", "", ""],
+    "finish_date": "2024-05-15"
+  },
+  {
+    "id": 8,
+    "title": "",
+    "description": "",
+    "developers": [
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" }
+    ],
+    "github_link": "https://github.com/fraperrone/TPG01-Front-Grupo8",
+    "deploy_link": "https://tpg-01-front-grupo8.vercel.app/index.html",
+    "technologies": ["", ""],
+    "liked": ["", ""],
+    "could_be_better": ["", ""],
+    "screenshots": ["https://via.placeholder.com/600x400", "", ""],
+    "finish_date": "2024-05-15"
+  },
+  {
+    "id": 9,
+    "title": "",
+    "description": "",
+    "developers": [
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" }
+    ],
+    "github_link": "https://github.com/Estivenfs/desarrollo-frontend-ifts29",
+    "deploy_link": "https://grupo-9-desarrollo-frontend-ifts29.vercel.app",
+    "technologies": ["", ""],
+    "liked": ["", ""],
+    "could_be_better": ["", ""],
+    "screenshots": ["https://via.placeholder.com/600x400", "", ""],
+    "finish_date": "2024-05-15"
+  },
+  {
+    "id": 10,
+    "title": "",
+    "description": "",
+    "developers": [
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" }
+    ],
+    "github_link": "https://github.com/lucre-ph/FrontEndIFTS",
+    "deploy_link": "https://front-end-ifts.vercel.app",
+    "technologies": ["", ""],
+    "liked": ["", ""],
+    "could_be_better": ["", ""],
+    "screenshots": ["https://via.placeholder.com/600x400", "", ""],
+    "finish_date": "2024-05-15"
+  },
+  {
+    "id": 11,
+    "title": "",
+    "description": "",
+    "developers": [
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" }
+    ],
+    "github_link": "https://github.com/xxiicode/grupo11-front-ifts-comA",
+    "deploy_link": "https://frontg11com-aifts25.vercel.app",
+    "technologies": ["", ""],
+    "liked": ["", ""],
+    "could_be_better": ["", ""],
+    "screenshots": ["https://via.placeholder.com/600x400", "", ""],
+    "finish_date": "2024-05-15"
+  },
+  {
+    "id": 12,
+    "title": "",
+    "description": "",
+    "developers": [
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" }
+    ],
+    "github_link": "https://github.com/Ana-Galvez/TP1-FRONT-END",
+    "deploy_link": "https://tp1-front-end-grupo12.vercel.app",
+    "technologies": ["", ""],
+    "liked": ["", ""],
+    "could_be_better": ["", ""],
+    "screenshots": ["https://via.placeholder.com/600x400", "", ""],
+    "finish_date": "2024-05-15"
+  },
+  {
+    "id": 13,
+    "title": "",
+    "description": "",
+    "developers": [
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" }
+    ],
+    "github_link": "https://github.com/jbenitez79/DSW-grupo13",
+    "deploy_link": "https://dsw-grupo13-kappa.vercel.app",
+    "technologies": ["", ""],
+    "liked": ["", ""],
+    "could_be_better": ["", ""],
+    "screenshots": ["https://via.placeholder.com/600x400", "", ""],
+    "finish_date": "2024-05-15"
+  },
+  {
+    "id": 14,
+    "title": "",
+    "description": "",
+    "developers": [
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" }
+    ],
+    "github_link": "https://github.com/Lean-Aballone/TPFront_1",
+    "deploy_link": "https://tp-front-1.vercel.app",
+    "technologies": ["", ""],
+    "liked": ["", ""],
+    "could_be_better": ["", ""],
+    "screenshots": ["https://via.placeholder.com/600x400", "", ""],
+    "finish_date": "2024-05-15"
+  },
+  {
+    "id": 15,
+    "title": "",
+    "description": "",
+    "developers": [
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" }
+    ],
+    "github_link": "https://github.com/Gefq2021/TP1-FrontEnd-Grupo15",
+    "deploy_link": "https://grupo15-tp1.vercel.app",
+    "technologies": ["", ""],
+    "liked": ["", ""],
+    "could_be_better": ["", ""],
+    "screenshots": ["https://via.placeholder.com/600x400", "", ""],
+    "finish_date": "2024-05-15"
+  },
+  {
+    "id": 16,
+    "title": "",
+    "description": "",
+    "developers": [
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" }
+    ],
+    "github_link": "https://github.com/sanavalos/dswf-tp1-grupo16",
+    "deploy_link": "https://front-reactivos.vercel.app",
+    "technologies": ["", ""],
+    "liked": ["", ""],
+    "could_be_better": ["", ""],
+    "screenshots": ["https://via.placeholder.com/600x400", "", ""],
+    "finish_date": "2024-05-15"
+  },
+  {
+    "id": 17,
+    "title": "",
+    "description": "",
+    "developers": [
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" }
+    ],
+    "github_link": "https://github.com/GabyA0714/TP_01_PROYECTO_EQUIPO_COMPLETO.git",
+    "deploy_link": "https://tp-01-proyecto-equipo-completo-seven.vercel.app",
+    "technologies": ["", ""],
+    "liked": ["", ""],
+    "could_be_better": ["", ""],
+    "screenshots": ["https://via.placeholder.com/600x400", "", ""],
+    "finish_date": "2024-05-15"
+  },
+  {
+    "id": 18,
+    "title": "",
+    "description": "",
+    "developers": [
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" },
+      { "name": "", "github": "" }
+    ],
+    "github_link": "https://github.com/PedroLuis1089/TP1_GRUPO18_GUERRA_BRICENO.git",
+    "deploy_link": "https://tp1-grupo18-guerra-briceno.vercel.app",
+    "technologies": ["", ""],
+    "liked": ["", ""],
+    "could_be_better": ["", ""],
+    "screenshots": ["https://via.placeholder.com/600x400", "", ""],
+    "finish_date": "2024-05-15"
+  }
+]

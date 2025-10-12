@@ -6,6 +6,7 @@ import "../styles/carousel.css";
 import Bitacora from "../pages/Bitacora";
 import Nombre from "../pages/Nombre";
 import Perfil from "../pages/Perfil";
+import Proyectos from "../pages/Proyectos";
 import Trabajo from "../pages/Trabajo";
 
 const slides = [
@@ -16,6 +17,11 @@ const slides = [
     component: <Bitacora />,
     path: "/bitacora",
     title: "Bitácora | DIVCENTRADO",
+  },
+  {
+    component: <Proyectos />,
+    path: "/proyectos",
+    title: "Proyectos | DIVCENTRADO",
   },
 ];
 
