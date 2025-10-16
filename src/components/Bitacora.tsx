@@ -1,7 +1,7 @@
 
 
 import "../styles/bitacora.css"; // Asegúrate de que esta ruta es correcta
-import LogEntry from "./logentry"; 
+import LogEntry from "./logentry.tsx"; 
 
 const logData = [
   {
