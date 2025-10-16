@@ -4,7 +4,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import "../styles/carousel.css";
 
 import Bitacora from "../components/Bitacora";
-import Nombre from "../components/Nombre";
+import Nombre from "../components/nombre";
 import Perfil from "../components/Perfil";
 import Trabajo from "../components/Trabajo";
 
