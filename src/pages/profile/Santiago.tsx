@@ -201,7 +201,7 @@ export default function Santiago() {
 
           <article>
             <h3>Música</h3>
-            <p>Me gusta el rap y el rock. Mis discos favoritos son:</p>
+            <p>Me gusta el rap y el rock tanto nacional como internacional . Mis discos favoritos son:</p>
             <ul id="musica">
               <li> <a href="https://www.youtube.com/watch?v=s7ZsYe5Uwg0&list=PLkROH3Eqs0T-21TF61hNOY00vR7bfn833&ab_channel=SystemOfADown-Topic"><em>Toxicity</em></a> – System of a Down</li>
               <li><a  href="https://www.youtube.com/watch?v=OksyOpzjCgk&list=RDOksyOpzjCgk&start_radio=1"><em>Epifanias</em></a> – Saje </li>
