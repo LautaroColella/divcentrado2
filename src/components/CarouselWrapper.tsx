@@ -3,19 +3,23 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 import "../styles/carousel.css";
 
-import Bitacora from "../components/Bitacora";
-import Nombre from "../components/Nombre";
-import Perfil from "../components/Perfil";
-import Trabajo from "../components/Trabajo";
+import Bitacora from "../pages/Bitacora";
+import Nombre from "../pages/Nombre";
+import Proyectos from "../pages/Proyectos";
+import Trabajo from "../pages/Trabajo";
 
 const slides = [
   { component: <Nombre />, path: "/nombre", title: "Portada | DIVCENTRADO" },
-  { component: <Trabajo />, path: "/trabajo", title: "Proyecto | DIVCENTRADO" },
-  { component: <Perfil />, path: "/perfil", title: "Perfil | DIVCENTRADO" },
+  { component: <Trabajo />, path: "/trabajo", title: "Trabajo | DIVCENTRADO" },
   {
     component: <Bitacora />,
     path: "/bitacora",
     title: "Bitácora | DIVCENTRADO",
+  },
+  {
+    component: <Proyectos />,
+    path: "/proyectos",
+    title: "Proyectos | DIVCENTRADO",
   },
 ];
 
