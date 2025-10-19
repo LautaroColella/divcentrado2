@@ -1,5 +1,5 @@
 html, body {
-	overflow-x: hidden; /* para evitar el scroll horizontal */
+	overflow-x: hidden; 
 	margin: 0;
 	padding: 0;
   }
@@ -7,12 +7,12 @@ html, body {
 
 #particles-js{
 	background-color:black;
-	position: fixed;   /* siempre cubre toda la pantalla */
+	position: fixed;   
 	top: 0;
 	left: 0;
-	width: 100vw;      /* ancho total de la ventana */
-	height: 100vh;     /* alto total de la ventana */
-	z-index: 1;        /* permite interacción con las partículas */
+	width: 100vw;      
+	height: 100vh;     
+	z-index: 1;        
 	margin: 0;
 	padding: 0;
 	pointer-events: auto;
@@ -23,14 +23,14 @@ html, body {
 	color: white;
   }
 
-  /* Asegurar que el contenido sea clickeable sobre las partículas */
+ 
   header, main, footer {
 	position: relative;
 	z-index: 2;
 	pointer-events: auto;
   }
 
-  /* Asegurar que el canvas de las partículas sea interactivo */
+  
   #particles-js canvas {
 	pointer-events: auto;
   }
@@ -124,7 +124,7 @@ header {
 }
 
   
-  /* === IMÁGENES === */
+ 
   .img {
 	display: block;
 	margin: 1rem auto;
@@ -133,7 +133,7 @@ header {
 	box-shadow: 0 3px 8px rgba(0,0,0,0.4);
   }
   
-  /* === LINKS === */
+  
   a {
 	color: #ffb347;
 	text-decoration: none;
