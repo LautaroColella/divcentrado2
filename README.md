@@ -127,4 +127,3 @@ src/
 ├── types/              # Definiciones de tipos TypeScript
 ├── main.tsx           # Punto de entrada de la aplicación
 └── router.tsx         # Configuración de rutas
-```
