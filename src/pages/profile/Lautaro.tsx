@@ -1,9 +1,10 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import foto from "../../assets/img/lautaro.jpg";
 import type { SectionItem } from "../../components/LautaroSection.tsx";
 import LautaroSection from "../../components/LautaroSection.tsx";
+import MovieModal from "../../components/MovieModal";
 import "../../styles/profiles/lautaro.css";
 
 const Lautaro: React.FC = () => {
@@ -42,6 +43,14 @@ const Lautaro: React.FC = () => {
     };
   }, []);
 
+  const [selectedMovieId, setSelectedMovieId] = useState<number | null>(null);
+  const [showMovieModal, setShowMovieModal] = useState(false);
+
+  const closeMovieModal = () => {
+    setShowMovieModal(false);
+    setSelectedMovieId(null);
+  };
+
   const habilidades: SectionItem[] = [
     { name: "Código morse" },
     { name: "Braille" },
@@ -50,11 +59,20 @@ const Lautaro: React.FC = () => {
   ];
 
   const peliculas: SectionItem[] = [
-    { name: "Snowden", youtube: "https://www.youtube.com/embed/QlSAiI3xMh4" },
-    { name: "Silk Road", youtube: "https://www.youtube.com/embed/LBOBuqBzn7w" },
+    {
+      name: "Snowden",
+      youtube: "https://www.youtube.com/embed/QlSAiI3xMh4",
+      tmdbId: 302401,
+    },
+    {
+      name: "Silk Road",
+      youtube: "https://www.youtube.com/embed/LBOBuqBzn7w",
+      tmdbId: 579051,
+    },
     {
       name: "The Fifth Estate",
       youtube: "https://www.youtube.com/embed/YQOiS_l_0Jk",
+      tmdbId: 162903,
     },
   ];
 
@@ -81,7 +99,14 @@ const Lautaro: React.FC = () => {
           <h5 className="card-title text-center mb-3">Lautaro Colella</h5>
 
           <LautaroSection title="Habilidades" items={habilidades} />
-          <LautaroSection title="Películas" items={peliculas} />
+          <LautaroSection
+            title="Películas"
+            items={peliculas}
+            onMovieClick={(id) => {
+              setSelectedMovieId(id);
+              setShowMovieModal(true);
+            }}
+          />
           <LautaroSection title="Música" items={musica} />
 
           <hr />
@@ -115,6 +140,12 @@ const Lautaro: React.FC = () => {
           </div>
         </div>
       </div>
+
+      <MovieModal
+        movieId={selectedMovieId}
+        show={showMovieModal}
+        onClose={closeMovieModal}
+      />
     </div>
   );
 };

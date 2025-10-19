@@ -3,14 +3,20 @@ import React from "react";
 export interface SectionItem {
   name: string;
   youtube?: string;
+  tmdbId?: number;
 }
 
 export interface SectionProps {
   title: string;
   items: SectionItem[];
+  onMovieClick?: (tmdbId: number) => void;
 }
 
-const LautaroSection: React.FC<SectionProps> = ({ title, items }) => {
+const LautaroSection: React.FC<SectionProps> = ({
+  title,
+  items,
+  onMovieClick,
+}) => {
   return (
     <div className="profile-section mb-4">
       <div className="profile-section-title fw-bold mb-2">{title}</div>
@@ -20,7 +26,17 @@ const LautaroSection: React.FC<SectionProps> = ({ title, items }) => {
             key={index}
             className="list-group-item d-flex justify-content-between align-items-center"
           >
-            {item.name}
+            {item.tmdbId && onMovieClick ? (
+              <button
+                className="btn btn-link p-0"
+                onClick={() => onMovieClick(item.tmdbId!)}
+              >
+                {item.name}
+              </button>
+            ) : (
+              <span>{item.name}</span>
+            )}
+
             {item.youtube && (
               <button
                 className="btn btn-sm btn-outline-danger"
