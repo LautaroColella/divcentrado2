@@ -1,17 +1,16 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import silvanaAudaz from "../../assets/img/silvanaAudaz.jpg";
+import silvanaSuave from "../../assets/img/silvanaSuave.jpg";
+import PageTitle from "../../components/PageTitle";
+import SilvanaAvatar from "../../components/SilvanaAvatar";
+import SilvanaBloque from "../../components/SilvanaBloque";
+import SilvanaBotonVolver from "../../components/SilvanaBotonVolver";
+import SilvanaDatos from "../../components/SilvanaDatos";
+import SilvanaPresentacion from "../../components/SilvanaPresentacion";
+import "../../styles/profiles/silvana/silvanaStyleAudaz.css";
 import "../../styles/profiles/silvana/silvanaStyleBase.css";
 import "../../styles/profiles/silvana/silvanaStyleSuave.css";
-import "../../styles/profiles/silvana/silvanaStyleAudaz.css";
-import silvanaSuave from "../../assets/img/silvanaSuave.jpg";
-import silvanaAudaz from "../../assets/img/silvanaAudaz.jpg";
-import { Link } from "react-router-dom";
-import SilvanaBloque from "../../components/SilvanaBloque";
-import SilvanaAvatar from "../../components/SilvanaAvatar";
-import SilvanaPresentacion from "../../components/SilvanaPresentacion";
-import SilvanaDatos from "../../components/SilvanaDatos";
-import SilvanaBotonVolver from "../../components/SilvanaBotonVolver";
-
-
 
 export default function Silvana() {
   const [modo, setModo] = useState<"suave" | "audaz">("suave");
@@ -25,27 +24,37 @@ export default function Silvana() {
       frase: "La belleza está en el equilibrio.",
       presentacion:
         "Me especializo en organizar procesos, facilitar la comunicación y crear entornos donde las personas pueden crecer y colaborar con confianza. Creo en lo simple, en lo que se entiende, en lo que conecta. Mi forma de trabajar busca equilibrio entre lo humano y lo profesional, entre lo estético y lo funcional.",
-      habilidades: ["Organización metódica", "Comunicación empática", "Diseño simbólico"],
-      peliculas: ["Amélie", "La vida secreta de las palabras", "El viaje de Chihiro"],
+      habilidades: [
+        "Organización metódica",
+        "Comunicación empática",
+        "Diseño simbólico",
+      ],
+      peliculas: [
+        "Amélie",
+        "La vida secreta de las palabras",
+        "El viaje de Chihiro",
+      ],
       musica: ["Ludovico Einaudi", "Sufjan Stevens", "Carla Morrison"],
     },
     audaz: {
       frase: "Romper el equilibrio también es arte.",
       presentacion:
         "Me muevo donde otros dudan. Organizo, comunico y empujo los límites para que las ideas se conviertan en acción. No me detengo en lo esperado: voy más allá, transformo, abro caminos.",
-      habilidades: ["Liderazgo disruptivo", "Resolución creativa", "Experimentación visual"],
+      habilidades: [
+        "Liderazgo disruptivo",
+        "Resolución creativa",
+        "Experimentación visual",
+      ],
       peliculas: ["Black Swan", "Matrix", "Perfect Blue"],
       musica: ["Nine Inch Nails", "FKA Twigs", "Rosalía"],
     },
   };
 
   useEffect(() => {
-  document.body.classList.remove("modo-suave", "modo-audaz");
-  document.body.classList.add(modo === "suave" ? "modo-suave" : "modo-audaz");
-  setAvatar(modo === "suave" ? silvanaSuave : silvanaAudaz);
-}, [modo]);
-
-
+    document.body.classList.remove("modo-suave", "modo-audaz");
+    document.body.classList.add(modo === "suave" ? "modo-suave" : "modo-audaz");
+    setAvatar(modo === "suave" ? silvanaSuave : silvanaAudaz);
+  }, [modo]);
 
   const datos = {
     nombre: "Silvana Fernández",
@@ -55,41 +64,40 @@ export default function Silvana() {
 
   return (
     <main className="presentacion">
+      <PageTitle title="Silvana | DIVCENTRADO" />
       <h1 className="frase-titulo">{contenido[modo].frase}</h1>
 
       <section className="seccion-central">
-
         <SilvanaDatos
-        nombre={datos.nombre}
-        edad={datos.edad}
-        ubicacion={datos.ubicacion}/>
+          nombre={datos.nombre}
+          edad={datos.edad}
+          ubicacion={datos.ubicacion}
+        />
 
         <SilvanaPresentacion texto={contenido[modo].presentacion} />
-
       </section>
-
 
       <section className="bloques-info">
         <SilvanaBloque
-        titulo="Habilidades"
-        items={contenido[modo].habilidades}
-        tipo="bloque-habilidades" />
+          titulo="Habilidades"
+          items={contenido[modo].habilidades}
+          tipo="bloque-habilidades"
+        />
 
         <SilvanaBloque
-        titulo="Películas favoritas"
-        items={contenido[modo].peliculas}
-        tipo="bloque-peliculas" />
+          titulo="Películas favoritas"
+          items={contenido[modo].peliculas}
+          tipo="bloque-peliculas"
+        />
 
         <SilvanaBloque
-        titulo="Música favorita"
-        items={contenido[modo].musica}
-        tipo="bloque-musica" />
-
+          titulo="Música favorita"
+          items={contenido[modo].musica}
+          tipo="bloque-musica"
+        />
       </section>
 
       <SilvanaBotonVolver />
-
     </main>
   );
 }
- 

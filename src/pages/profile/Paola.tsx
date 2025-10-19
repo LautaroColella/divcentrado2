@@ -1,8 +1,14 @@
-
 // src/pages/profile/Paola.tsx
+import {
+  ArrowLeft,
+  Film,
+  Image as ImageIcon,
+  Music,
+  Palette,
+} from "lucide-react";
 import { useRef, useState } from "react";
-import { ArrowLeft, Palette, Image as ImageIcon, Music, Film } from "lucide-react";
 import { Link } from "react-router-dom";
+import PageTitle from "../../components/PageTitle";
 import "../../styles/profiles/alvarez.css";
 
 // IMPORTS desde src/assets/img (nombres EXACTOS)
@@ -17,19 +23,19 @@ import avatar1 from "../../assets/img/imgAlvarezPerfil.png";
 import avatar2 from "../../assets/img/imgAlvarezPerfil1.png";
 import avatar3 from "../../assets/img/imgAlvarezPerfil2.jpeg";
 
-import mirandaBg  from "../../assets/img/fondoMiranda.jpg";
-import katyBg     from "../../assets/img/fondoKaty.jpg";
-import duaBg      from "../../assets/img/fondoDua.jpg";
 import coldplayBg from "../../assets/img/fondoColdplay.jpg";
+import duaBg from "../../assets/img/fondoDua.jpg";
+import katyBg from "../../assets/img/fondoKaty.jpg";
+import mirandaBg from "../../assets/img/fondoMiranda.jpg";
 
-import pradaBg    from "../../assets/img/fondoPrada.jpg";
-import prideBg    from "../../assets/img/fondoPride.jpg";
-import conjuroBg  from "../../assets/img/fondoConjuro.jpg";
 import avengersBg from "../../assets/img/fondoAvengers.jpg";
+import conjuroBg from "../../assets/img/fondoConjuro.jpg";
+import pradaBg from "../../assets/img/fondoPrada.jpg";
+import prideBg from "../../assets/img/fondoPride.jpg";
 
 export default function Paola() {
   const fondosCard = [fondo1, fondo2, fondo3, fondo4, fondo5, fondo6];
-  const avatares   = [avatar1, avatar2, avatar3];
+  const avatares = [avatar1, avatar2, avatar3];
 
   const artistas = [
     { name: "Miranda", bg: mirandaBg },
@@ -42,7 +48,7 @@ export default function Paola() {
     { name: "El diablo viste a la moda", bg: pradaBg },
     { name: "Orgullo y prejuicio", bg: prideBg },
     { name: "El conjuro", bg: conjuroBg },
-    { name: "Avengers",  bg: avengersBg },
+    { name: "Avengers", bg: avengersBg },
   ];
 
   // --- estado / refs ---
@@ -74,7 +80,7 @@ export default function Paola() {
     const el = document.getElementById("avatar");
     el?.classList.add("fade-out");
     setTimeout(() => {
-      setAvatarIndex(i => (i + 1) % avatares.length);
+      setAvatarIndex((i) => (i + 1) % avatares.length);
       el?.classList.remove("fade-out");
     }, 400);
   };
@@ -95,6 +101,7 @@ export default function Paola() {
 
   return (
     <div className="paola-scope">
+      <PageTitle title="Paola | DIVCENTRADO" />
       {/* Header / volver a portada si tenés una ruta raíz */}
       <header>
         <nav>
@@ -123,16 +130,22 @@ export default function Paola() {
         {/* Contenido */}
         <div className="card__content">
           <h1 className="card__title">Alvarez Paola</h1>
-          <p className="card__meta"><strong>Ubicación:</strong> Tucumán, Argentina</p>
-          <p className="card__meta"><strong>Edad:</strong> 36 años</p>
+          <p className="card__meta">
+            <strong>Ubicación:</strong> Tucumán, Argentina
+          </p>
+          <p className="card__meta">
+            <strong>Edad:</strong> 36 años
+          </p>
 
           <section className="card__section">
             <h2>Presentación</h2>
             <p className="presentacion">
-              Soy estudiante de dos carreras vinculadas a la tecnología.
-              Me apasionan la programación, el diseño de interfaces y el trabajo en equipo.
-              Participé en proyectos académicos y busco seguir creciendo en el área de desarrollo web y de software.
-              En mi tiempo libre disfruto de jugar videojuegos, escuchar música y compartir momentos con mi familia y mis mascotas.
+              Soy estudiante de dos carreras vinculadas a la tecnología. Me
+              apasionan la programación, el diseño de interfaces y el trabajo en
+              equipo. Participé en proyectos académicos y busco seguir creciendo
+              en el área de desarrollo web y de software. En mi tiempo libre
+              disfruto de jugar videojuegos, escuchar música y compartir
+              momentos con mi familia y mis mascotas.
             </p>
           </section>
 
@@ -168,22 +181,28 @@ export default function Paola() {
 
           <section className="card__section">
             <h2>Selección Actual</h2>
-            <p id="seleccion-actual" className="card__meta">{seleccion}</p>
+            <p id="seleccion-actual" className="card__meta">
+              {seleccion}
+            </p>
           </section>
 
           {/* Botones */}
           <section className="card__actions">
             <button className="btn" onClick={cambiarFondo}>
-              <Palette /><span>Cambiar Estilo</span>
+              <Palette />
+              <span>Cambiar Estilo</span>
             </button>
             <button className="btn" onClick={cambiarAvatar}>
-              <ImageIcon /><span>Cambiar Foto</span>
+              <ImageIcon />
+              <span>Cambiar Foto</span>
             </button>
             <button className="btn" onClick={cicloArtista}>
-              <Music /><span>Fondos Artistas</span>
+              <Music />
+              <span>Fondos Artistas</span>
             </button>
             <button className="btn" onClick={cicloPelicula}>
-              <Film /><span>Fondos Películas</span>
+              <Film />
+              <span>Fondos Películas</span>
             </button>
           </section>
         </div>
@@ -195,4 +214,3 @@ export default function Paola() {
     </div>
   );
 }
-

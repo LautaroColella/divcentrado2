@@ -5,6 +5,7 @@ import foto from "../../assets/img/lautaro.jpg";
 import type { SectionItem } from "../../components/LautaroSection.tsx";
 import LautaroSection from "../../components/LautaroSection.tsx";
 import MovieModal from "../../components/MovieModal";
+import PageTitle from "../../components/PageTitle";
 import "../../styles/profiles/lautaro.css";
 
 const Lautaro: React.FC = () => {
@@ -90,6 +91,7 @@ const Lautaro: React.FC = () => {
 
   return (
     <div className="d-flex flex-column justify-content-center align-items-center min-vh-100">
+      <PageTitle title="Lautaro | DIVCENTRADO" />
       <div
         className="card profile-card shadow-lg"
         style={{ maxWidth: "400px" }}
@@ -118,7 +120,6 @@ const Lautaro: React.FC = () => {
           </div>
         </div>
       </div>
-
       <div
         className="modal fade"
         id="videoModal"
@@ -140,7 +141,6 @@ const Lautaro: React.FC = () => {
           </div>
         </div>
       </div>
-
       <MovieModal
         movieId={selectedMovieId}
         show={showMovieModal}
