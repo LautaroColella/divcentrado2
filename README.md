@@ -27,103 +27,59 @@ En este proyecto vas a conocernos más a fondo: quiénes somos, nuestros gustos 
 
 ## 🛠️ Tecnologías Utilizadas
 
-* **Framework:** React 18+
-* **Lenguaje:** TypeScript
-* **Bundler:** Vite
-* **Routing:** React Router DOM
-* **Estilos:** Bootstrap 5 y CSS3
-* **Animaciones:** TSParticles
-* **Linting:** ESLint
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+
+![JavaScript](https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
+
+![Bootstrap](https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white)
+
+![Google Fonts](https://img.shields.io/badge/Google%20Fonts-4285F4?style=for-the-badge&logo=google&logoColor=white)
+
+![Font Awesome](https://img.shields.io/badge/Font%20Awesome-yellow?style=for-the-badge&logo=fontawesome&logoColor=blue)
+
+![Particle JS](https://img.shields.io/badge/Particle.js-gray?style=for-the-badge&logo=square&logoColor=black)
+
+## 📂 Estructura y Archivos
+
+| Carpeta / Archivo | Descripción                 |
+| ----------------- | --------------------------- |
+| `index.html`      | Página principal            |
+| `lautaro.html`    | Página de Lautaro Colella   |
+| `santi.html`      | Página de Santiago Rojas    |
+| `silvana.html`    | Página de Silvana Fernandez |
+| `cristian.html`   | Página de Cristian Paez     |
+| `paola.html`      | Página de Paola Alvarez     |
+| `/styles`         | Hojas de estilo CSS         |
+| `/scripts`        | Archivos JavaScript         |
+| `/img`            | Multimedia (imágenes)       |
+
+## ⚡ JavaScript
+
+Las funciones dinámicas implementadas incluyen:
+
+- En la portada:
+  - Carousel de 3 paginas
+  - Animación Flip al hacer click en el circulo de propósito
+  - Animación Ripple al hacer click en el circulo de valores
+  - Animación Shrink al hacer click en el circulo de método
+- En la página de Lautaro:
+  - Se muestra un modal al hacer click en los botones de youtube
+- En la página de Cristian:
+  - Animación Flip al hacer click en las tarjetas
+- En la página de Paola:
+  - Cambio del fondo al hacer click en cambiar estilo, artistas o peliculas
+  - Cambio de la foto de perfil al hacer click en cambiar foto
+- En la página de Silvana:
+  - Cambios en toda la página al hoverear sobre la foto
+- En la página de Santiago:
+  - Expansión de particulas al hacer click en el fondo
+
+> 💡 _Este apartado se irá ampliando a medida que se agreguen más funcionalidades específicas en los siguientes trabajos prácticos._
+
+## 🚀 Enlace al Proyecto Desplegado
+
+[Publicación en Vercel](https://frontend-ifts.vercel.app/)
 
 ---
-
-## ⚙️ Instalación y Uso
-
-### Prerrequisitos
-* Node.js (versión 18 o superior)
-* `npm` o `yarn`
-
-### Pasos
-
-1.  **Clonar el repositorio:**
-    ```bash
-    # Reemplaza la URL por la de tu repositorio (HTTPS o SSH)
-    git clone [https://github.com/tu-usuario/divcentrado2.git](https://github.com/tu-usuario/divcentrado2.git)
-    ```
-
-2.  **Navegar al directorio del proyecto:**
-    ```bash
-    cd divcentrado2
-    ```
-
-3.  **Instalar dependencias:**
-    ```bash
-    npm install
-    ```
-
-4.  **Ejecutar en modo de desarrollo:**
-    ```bash
-    npm run dev
-    ```
-    La aplicación estará disponible en `http://localhost:5173`
-
-### Otros Scripts
-
-* **Crear build de producción:**
-    ```bash
-    npm run build
-    ```
-* **Previsualizar el build:**
-    ```bash
-    npm run preview
-    ```
-* **Ejecutar el linter:**
-    ```bash
-    npm run lint
-    ```
-
----
-
-## ✨ Funcionalidades Implementadas
-
-* **Navegación y Routing:** Uso de `React Router DOM` para la navegación fluida entre páginas y rutas dinámicas para los perfiles individuales.
-* **Carrusel Principal:** Componente `CarouselWrapper` que funciona como contenedor principal para navegar por las secciones.
-* **Componentes Interactivos:**
-    * **Portada (`Nombre`):** Componente SVG con texto centrado.
-    * **Trabajo:** Sistema de círculos con animaciones CSS (Flip, Ripple, Shrink) al hacer clic.
-* **Perfiles Individuales:**
-    * **Santiago:** Implementación de `TSParticles` con configuración dinámica para efectos de partículas.
-    * **Lautaro, Cristian, Paola, Silvana:** Estructura base preparada para el desarrollo futuro.
-* **Bitácora:** Sistema de logs y entradas para documentar el progreso.
-
----
-
-## 📂 Estructura del Proyecto
-
-```
-src/
-├── components/           # Componentes reutilizables
-│   ├── Bitacora.tsx     # Componente de bitácora
-│   ├── logentry.tsx     # Componente de entrada de log
-│   ├── nombre.tsx       # Componente de nombre/portada
-│   ├── Perfil.tsx       # Componente de perfil
-│   └── Trabajo.tsx      # Componente de trabajo
-├── pages/               # Páginas principales
-│   ├── CarouselWrapper.tsx  # Wrapper del carrusel principal
-│   └── profile/         # Páginas de perfiles individuales
-│       ├── Cristian.tsx
-│       ├── Lautaro.tsx
-│       ├── Paola.tsx
-│       ├── Santiago.tsx
-│       └── Silvana.tsx
-├── styles/              # Hojas de estilo CSS
-│   ├── profiles/        # Estilos específicos de perfiles
-│   ├── bitacora.css
-│   ├── carousel.css
-│   ├── nombre.css
-│   └── trabajo.css
-├── assets/              # Recursos multimedia
-│   └── img/            # Imágenes y iconos
-├── types/              # Definiciones de tipos TypeScript
-├── main.tsx           # Punto de entrada de la aplicación
-└── router.tsx         # Configuración de rutas

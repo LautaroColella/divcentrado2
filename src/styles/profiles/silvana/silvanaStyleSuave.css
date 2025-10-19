@@ -4,26 +4,25 @@
 
 body.modo-suave {
   font-family: 'Lora', serif;
-  background-image: url('../img/silvanaFondoSuave.jpg');
+  background-image: url('/src/assets/img/silvanaFondoSuave.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color: #333;
+  color: #4a6fa5;
   transition: all 0.5s ease;
 }
 
 /* Frase principal */
 .frase-titulo {
-  font-size: 2rem;
-  color: #8a8bd4;
+  font-size: 3rem;
+  color: #4a6fa5;
   text-align: center;
-  margin-bottom: 1rem;
   font-weight: 700;
-  text-shadow: 1px 1px #fff;
+  text-shadow: 1px 1px #000;
 }
 
-/* Sección central con avatar y datos */
+/* Sección central */
 .seccion-central {
   display: flex;
   justify-content: center;
@@ -33,53 +32,42 @@ body.modo-suave {
   margin-bottom: 1rem;
 }
 
-/* Avatar rectangular más compacto */
-.avatar-rectangular {
+/* Avatar */
+body.modo-suave .avatar-rectangular {
   width: 220px;
   height: 300px;
   border-radius: 12px;
   overflow: hidden;
-  border: 4px solid #8a8bd4;
-  box-shadow: 0 0 12px rgba(138, 139, 212, 0.4);
+  border: 4px solid #4a6fa5;
+  box-shadow: 0 0 12px rgba(74, 111, 165, 0.4);
   transition: transform 0.3s ease;
   cursor: pointer;
 }
 
-.avatar-rectangular img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
-/* Datos personales a la izquierda */
+/* Datos personales */
 .info-lateral.izquierda {
   text-align: right;
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-weight: 600;
-  color: #5a5a8a;
+  color: #3b4c6b;
 }
 
-.dato-nombre {
-  font-size: 1.4rem;
-  margin-bottom: 0.3rem;
-}
 
 .dato-secundario {
-  font-size: 1rem;
-  color: #777;
+  color: #5a6a7a;
 }
 
-/* Presentación a la derecha */
-.info-lateral.derecha {
+/* Presentación */
+.info--lateral.derecha {
   max-width: 300px;
-  font-size: 1rem;
   line-height: 1.5;
-  color: #444;
+  color: #34495e;
 }
 
-/* Bloques inferiores */
+/* Bloques temáticos */
 .bloques-info {
   display: flex;
   justify-content: center;
@@ -88,13 +76,13 @@ body.modo-suave {
   margin-top: 1rem;
 }
 
-.bloque {
-  background-color: rgba(255, 255, 255, 0.85);
-  border: 2px solid #8a8bd4;
+body.modo-suave .bloque {
+  background-color: #B57EDC;
+  border: 2px solid #004C6D;
   border-radius: 12px;
   padding: 1rem 1.2rem;
   width: 220px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px #000;
   transition: transform 0.3s ease;
 }
 
@@ -102,10 +90,10 @@ body.modo-suave {
   transform: scale(1.03);
 }
 
-.bloque h2 {
+body.modo-suave .bloque h2 {
   font-size: 1.2rem;
   margin-bottom: 0.5rem;
-  color: #5a5a8a;
+  color: #004C6D;
 }
 
 .bloque ul li {
@@ -113,42 +101,12 @@ body.modo-suave {
   line-height: 1.4;
 }
 
-/* Botón de volver arriba a la izquierda */
-.btn-volver-superior {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
+body.modo-suave .btn-volver-inferior {
   background-color: #8a8bd4;
-  color: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  font-weight: bold;
-  z-index: 10;
-  transition: background-color 0.3s ease;
+  color: #000;
 }
 
-.btn-volver-superior:hover {
+body.modo-suave .btn-volver-inferior:hover {
   background-color: #6a6bb4;
-}
-
-/* Responsive para pantallas pequeñas */
-@media (max-width: 768px) {
-  .seccion-central {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .info-lateral {
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
-
-  .bloques-info {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .bloque {
-    width: 90%;
-  }
+  transform: scale(1.05);
 }

@@ -11,9 +11,9 @@ body {
     #352553, #263060, #003b6b, #004a71, #005561, 
     #005c3e, #205f0f
   );
-  background-attachment: fixed; /* efecto "parallax" */
+  background-attachment: fixed;
   background-size: cover;
-  color: #fff; /* texto claro para contraste */
+  color: #fff;
 }
 
 
@@ -42,7 +42,7 @@ body {
 }
 
 
-.perfil {
+.wrapper {
   display: flex;
   gap: 30px;
   max-width: 1200px;
@@ -59,7 +59,7 @@ body {
   text-align: center;
 }
 
-.foto-box {
+.fotoBox {
   border: 5px solid #0077ff;
   padding: 5px;
   border-radius: 12px;
@@ -90,8 +90,8 @@ body {
 .flip-inner {
   position: relative;
   width: 100%;
-  height: auto;       /* altura automática */
-  min-height: 200px;  /* altura mínima */
+  height: auto;  
+  min-height: 200px;  
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
@@ -137,7 +137,7 @@ body {
 }
 
 /* Redes */
-.social-grid {
+.socialGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 15px;
@@ -147,8 +147,9 @@ body {
 .social img {
   width: 60px;
   height: 60px;
+  max-width: 100%;
   object-fit: contain;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform .3s ease, opacity .3s ease;
 }
 
 .social img:hover {
@@ -168,7 +169,7 @@ footer {
 
 
 @media (max-width: 1200px) {
-  .perfil {
+  .wrapper {
     max-width: 1000px;
     padding: 15px;
   }
@@ -180,7 +181,7 @@ footer {
 
 
 @media (max-width: 900px) {
-  .perfil {
+  .wrapper {
     flex-direction: column;
     align-items: center;
   }
@@ -199,11 +200,11 @@ footer {
   }
 
   .right {
-    grid-template-columns: 1fr; /* solo una columna */
+    grid-template-columns: 1fr; 
   }
 
-  .social-grid {
-    grid-template-columns: 1fr; /* redes apiladas */
+  .socialGrid {
+    grid-template-columns: 1fr; 
     gap: 10px;
   }
 }

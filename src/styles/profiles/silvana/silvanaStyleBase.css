@@ -1,6 +1,6 @@
-/* -----------------------------------
-   BASE CSS — Reset y estructura común
-   ----------------------------------- */
+/* -------------
+   BASE CSS 
+   ------------- */
 
 /* Reset básico */
 * {
@@ -11,28 +11,27 @@
 
 /* Tipografía base */
 html {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 body {
   line-height: 1.6;
-  font-family: 'Lora', serif; /* Se sobrescribe en modo audaz */
-  color: #333;
-  background-color: #fff;
+  font-family: 'Lora', serif; /* Se sobrescribe por modo */
   transition: all 0.5s ease;
-  overflow-x: hidden;   /* Oculta el scroll horizontal */
-  overflow-y: auto;     /* Permite scroll vertical si es necesario */
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 /* Imágenes */
 img {
   max-width: 100%;
   display: block;
+  object-fit: cover;
 }
 
 /* Listas */
 ul {
-  list-style-type: none;
+  list-style: none;
   padding-left: 0;
 }
 
@@ -47,46 +46,133 @@ main.presentacion {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 1.5rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 
 /* Frase principal */
 .frase-titulo {
-  font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   text-align: center;
 }
 
-/* Botón de volver arriba a la izquierda */
-.btn-volver-superior {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  background-color: #8a8bd4;
-  color: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
+/* Sección central */
+.seccion-central {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+/* Avatar */
+.avatar-rectangular {
+  width: 220px;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.avatar-rectangular img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Datos personales */
+.info-lateral.izquierda {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: right;
+  font-weight: 800;
+}
+
+.dato-nombre {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.dato-secundario {
+  font-size: 1.5rem;
+}
+
+/* Presentación */
+.info--lateral.derecha {
+  max-width: 300px;
+  font-size: 1.8rem;
+  line-height: 1.5;
+}
+
+/* Bloques temáticos */
+.bloques-info {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.bloque {
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  width: 220px;
+  transition: transform 0.3s ease;
+}
+
+.bloque:hover {
+  transform: scale(1.03);
+}
+
+.bloque h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.bloque ul li {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.btn-volver-inferior {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
   font-weight: bold;
-  z-index: 10;
-  transition: background-color 0.3s ease;
+  font-size: 1.1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
-.btn-volver-superior:hover {
-  background-color: #6a6bb4;
+/* Responsive */
+@media (max-width: 768px) {
+  .seccion-central {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .info-lateral {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .bloques-info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .bloque {
+    width: 90%;
+  }
 }
 
-/* Transiciones suaves */
-body,
-img,
-h1,
-h2,
-p,
-li,
-a {
-  transition: all 0.3s ease;
-}
