@@ -4,7 +4,7 @@
 
 body.modo-audaz {
   font-family: 'Anton', sans-serif;
-  background-image: url('../img/silvanaFondoAudas.jpg');
+  background-image: url('/src/assets/img/silvanaFondoAudas.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -14,26 +14,25 @@ body.modo-audaz {
 }
 
 /* Frase principal */
-.frase-titulo {
-  font-size: 2rem;
+body.modo-audaz .frase-titulo {
+  font-size: 2.5rem;
   color: #ffcc00;
   text-align: center;
-  margin-bottom: 1rem;
   font-weight: 900;
-  text-shadow: 2px 2px #000;
+  text-shadow: 2px 2px #d31f1f;
 }
 
-/* Sección central con avatar y datos */
+/* Sección central */
 .seccion-central {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  gap: 2.5rem;
   flex-wrap: wrap;
   margin-bottom: 1rem;
 }
 
-/* Avatar rectangular más compacto */
+/* Avatar */
 .avatar-rectangular {
   width: 220px;
   height: 300px;
@@ -45,42 +44,31 @@ body.modo-audaz {
   cursor: pointer;
 }
 
-.avatar-rectangular img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
-/* Datos personales a la izquierda */
+/* Datos personales */
 .info-lateral.izquierda {
   text-align: right;
-  display: flex;
   flex-direction: column;
   justify-content: center;
-  font-weight: 700;
-  color: #ffcc00;
+  font-weight: 800;
+  color: #e9e0bc;
 }
 
-.dato-nombre {
-  font-size: 1.4rem;
-  margin-bottom: 0.3rem;
-}
 
 .dato-secundario {
-  font-size: 1rem;
-  color: #fefefe;
+  font-size: 1.5rem;
+  color: #e9e0bc;
 }
 
-/* Presentación a la derecha */
-.info-lateral.derecha {
+/* Presentación */
+.info--lateral.derecha {
   max-width: 300px;
-  font-size: 1rem;
   line-height: 1.5;
   color: #fefefe;
   font-weight: 500;
 }
 
-/* Bloques inferiores */
+/* Bloques temáticos */
 .bloques-info {
   display: flex;
   justify-content: center;
@@ -118,42 +106,12 @@ body.modo-audaz {
   color: #fefefe;
 }
 
-/* Botón de volver arriba a la izquierda */
-.btn-volver-superior {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
+body.modo-audaz .btn-volver-inferior {
   background-color: #ffcc00;
   color: #330000;
-  padding: 0.4rem 0.8rem;
-  border-radius: 6px;
-  font-weight: bold;
-  z-index: 10;
-  transition: background-color 0.3s ease;
 }
 
-.btn-volver-superior:hover {
+body.modo-audaz .btn-volver-inferior:hover {
   background-color: #ffaa00;
-}
-
-/* Responsive para pantallas pequeñas */
-@media (max-width: 768px) {
-  .seccion-central {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .info-lateral {
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
-
-  .bloques-info {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .bloque {
-    width: 90%;
-  }
+  transform: scale(1.05);
 }
