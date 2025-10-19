@@ -1,13 +1,11 @@
-
-
-import "../styles/bitacora.css"; // Asegúrate de que esta ruta es correcta
-import LogEntry from "./logentry.tsx"; 
+import LogEntry from "../components/logentry";
+import "../styles/bitacora.css";
 
 const logData = [
   {
-    date: "Bitácora 5 – 15/10/2025", // Fecha estimada para la 2da entrega
+    date: "Bitácora 5 – 15/10/2025",
     content: [
-      "Se dio inicio a la segunda entrega del proyecto, planificando y distribuyendo las nuevas tareas entre los miembros del equipo."
+      "Se dio inicio a la segunda entrega del proyecto, planificando y distribuyendo las nuevas tareas entre los miembros del equipo.",
     ],
     tasks: [
       { title: "Creación del repo y Routing", assignee: "Lau" },
@@ -20,25 +18,25 @@ const logData = [
   {
     date: "Bitácora 4 – 19/09/2025",
     content: [
-      "Se concretó el merge de las páginas individuales en la rama principal (DEVELOPMENT). Durante esta etapa se reorganizaron las carpetas del proyecto para mejorar la estructura general, separando componentes, estilos, imágenes y scripts de manera lógica y ordenada."
+      "Se concretó el merge de las páginas individuales en la rama principal (DEVELOPMENT). Durante esta etapa se reorganizaron las carpetas del proyecto para mejorar la estructura general, separando componentes, estilos, imágenes y scripts de manera lógica y ordenada.",
     ],
   },
   {
     date: "Bitácora 3 – 17/09/2025",
     content: [
-      "Se analizaron los detalles finales de cada sección. Se verificó el cumplimiento de estándares y se asignó el despliegue a Vercel."
+      "Se analizaron los detalles finales de cada sección. Se verificó el cumplimiento de estándares y se asignó el despliegue a Vercel.",
     ],
   },
   {
     date: "Bitácora 2 – 12/09/2025",
     content: [
-      "Se revisaron los avances individuales, se ajustaron tiempos y se brindó retroalimentación para mejorar la coherencia del proyecto."
+      "Se revisaron los avances individuales, se ajustaron tiempos y se brindó retroalimentación para mejorar la coherencia del proyecto.",
     ],
   },
   {
     date: "Bitácora 1 – 05/09/2025",
     content: [
-      "Primera reunión del equipo. Se definieron roles, se creó el repositorio en Git y se discutieron ideas preliminares de diseño."
+      "Primera reunión del equipo. Se definieron roles, se creó el repositorio en Git y se discutieron ideas preliminares de diseño.",
     ],
   },
 ];
