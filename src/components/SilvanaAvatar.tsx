@@ -1,15 +1,19 @@
-import React from "react";
-
-interface SilvanaAvatarProps {
+type Props = {
   modo: "suave" | "audaz";
   imagen: string;
-  onToggle: () => void;
-}
+  onMouseEnter: () => void;
+  onMouseLeave: () => void;
+};
 
-export default function SilvanaAvatar({ modo, imagen, onToggle }: SilvanaAvatarProps) {
+export default function SilvanaAvatar({ modo, imagen, onMouseEnter, onMouseLeave }: Props) {
   return (
-    <div className="avatar-rectangular" onClick={onToggle}>
-      <img src={imagen} alt={`Avatar Silvana ${modo}`} />
+    <div
+      className="avatar-rectangular"
+      onMouseEnter={onMouseEnter}
+      onMouseLeave={onMouseLeave}>
+        
+      <img src={imagen} alt={`Avatar ${modo}`} />
     </div>
   );
 }
+ 

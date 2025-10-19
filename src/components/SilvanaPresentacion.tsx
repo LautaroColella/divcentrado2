@@ -1,13 +1,9 @@
 import React from "react";
 
-interface SilvanaPresentacionProps {
+interface Props {
   texto: string;
 }
 
-export default function SilvanaPresentacion({ texto }: SilvanaPresentacionProps) {
-  return (
-    <div className="info-lateral derecha">
-      <p className="presentacion-texto">{texto}</p>
-    </div>
-  );
+export default function SilvanaPresentacion({ texto }: Props) {
+  return <p className="texto-presentacion">{texto}</p>;
 }

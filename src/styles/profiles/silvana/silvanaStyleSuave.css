@@ -1,0 +1,112 @@
+/* -----------------------------------
+   MODO SUAVE — Estilo visual delicado
+   ----------------------------------- */
+
+body.modo-suave {
+  font-family: 'Lora', serif;
+  background-image: url('/src/assets/img/silvanaFondoSuave.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: #4a6fa5;
+  transition: all 0.5s ease;
+}
+
+/* Frase principal */
+.frase-titulo {
+  font-size: 3rem;
+  color: #4a6fa5;
+  text-align: center;
+  font-weight: 700;
+  text-shadow: 1px 1px #000;
+}
+
+/* Sección central */
+.seccion-central {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+/* Avatar */
+body.modo-suave .avatar-rectangular {
+  width: 220px;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 4px solid #4a6fa5;
+  box-shadow: 0 0 12px rgba(74, 111, 165, 0.4);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+
+/* Datos personales */
+.info-lateral.izquierda {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-weight: 600;
+  color: #3b4c6b;
+}
+
+
+.dato-secundario {
+  color: #5a6a7a;
+}
+
+/* Presentación */
+.info--lateral.derecha {
+  max-width: 300px;
+  line-height: 1.5;
+  color: #34495e;
+}
+
+/* Bloques temáticos */
+.bloques-info {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+body.modo-suave .bloque {
+  background-color: #B57EDC;
+  border: 2px solid #004C6D;
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  width: 220px;
+  box-shadow: 0 2px 6px #000;
+  transition: transform 0.3s ease;
+}
+
+.bloque:hover {
+  transform: scale(1.03);
+}
+
+body.modo-suave .bloque h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #004C6D;
+}
+
+.bloque ul li {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+body.modo-suave .btn-volver-inferior {
+  background-color: #8a8bd4;
+  color: #000;
+}
+
+body.modo-suave .btn-volver-inferior:hover {
+  background-color: #6a6bb4;
+  transform: scale(1.05);
+}

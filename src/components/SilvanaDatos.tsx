@@ -1,17 +1,17 @@
 import React from "react";
 
-interface SilvanaDatosProps {
+interface Props {
   nombre: string;
   edad: string;
   ubicacion: string;
 }
 
-export default function SilvanaDatos({ nombre, edad, ubicacion }: SilvanaDatosProps) {
+export default function SilvanaDatos({ nombre, edad, ubicacion }: Props) {
   return (
-    <div className="info-lateral izquierda">
-      <p className="dato-nombre">{nombre}</p>
-      <p className="dato-secundario">{ubicacion}</p>
-      <p className="dato-secundario">{edad}</p>
+    <div className="info-lateral">
+      <h2>{nombre}</h2>
+      <p>{edad}</p>
+      <p>{ubicacion}</p>
     </div>
   );
 }

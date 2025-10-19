@@ -1,13 +1,8 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
-interface SilvanaBotonVolverProps {
-  ruta?: string;
-}
-
-export default function SilvanaBotonVolver({ ruta = "/nombre" }: SilvanaBotonVolverProps) {
+export default function SilvanaBotonVolver() {
   return (
-    <Link to={ruta} className="btn-volver-superior">
+    <Link to="/nombre" className="btn-volver">
       Portada
     </Link>
   );
