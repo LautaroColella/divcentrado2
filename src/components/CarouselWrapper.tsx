@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import SidebarPerfiles from "./SidebarPerfiles";
 
 import "../styles/carousel.css";
 
@@ -59,6 +60,8 @@ export default function CarouselWrapper() {
       className="main-carousel d-flex align-items-center justify-content-center position-relative"
       style={{ height: "100vh" }}
     >
+      <SidebarPerfiles />
+
       <div className="carousel-inner h-100 w-100">
         {slides.map((slide, i) => (
           <div

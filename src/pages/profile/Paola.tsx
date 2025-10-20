@@ -1,7 +1,14 @@
 import { useRef, useState } from "react";
+import {
+  ActionsBar,
+  List,
+  PageBack,
+  ProfileCard,
+  Section,
+} from "../../components/CardPaola";
 import MovieModal from "../../components/MovieModal";
 import PageTitle from "../../components/PageTitle";
-import { PageBack, ProfileCard, Section, List, ActionsBar } from "../../components/CardPaola";
+import SidebarPerfiles from "../../components/SidebarPerfiles";
 import "../../styles/profiles/alvarez.css";
 
 //FONDOS
@@ -118,6 +125,7 @@ export default function Paola() {
   return (
     <div className="paola-scope">
       <PageTitle title="Paola | DIVCENTRADO" />
+      <SidebarPerfiles />
 
       {/* Header*/}
       <PageBack to="/" />
@@ -126,32 +134,45 @@ export default function Paola() {
       <ProfileCard ref={cardRef} backgroundUrl={bgActual}>
         {/*Avatar*/}
         <figure className="card__avatar-wrap">
-          <img id="avatar" className="avatar" src={avatarActual} alt="Foto de perfil de Paola" />
+          <img
+            id="avatar"
+            className="avatar"
+            src={avatarActual}
+            alt="Foto de perfil de Paola"
+          />
         </figure>
 
         {/*Contenido*/}
         <div className="card__content">
           <h1 className="card__title">Alvarez Paola</h1>
 
-          <p className="card__meta"><strong>Ubicación:</strong> Tucumán, Argentina</p>
-          <p className="card__meta"><strong>Edad:</strong> 36 años</p>
+          <p className="card__meta">
+            <strong>Ubicación:</strong> Tucumán, Argentina
+          </p>
+          <p className="card__meta">
+            <strong>Edad:</strong> 36 años
+          </p>
 
           <Section title="Presentación">
             <p className="presentacion">
-              Soy estudiante de dos carreras vinculadas a la tecnología. Me apasionan la programación,
-              el diseño de interfaces y el trabajo en equipo. Participé en proyectos académicos y busco
-              seguir creciendo en el área de desarrollo web y de software. En mi tiempo libre disfruto
-              de jugar videojuegos, escuchar música y compartir momentos con mi familia y mis mascotas.
+              Soy estudiante de dos carreras vinculadas a la tecnología. Me
+              apasionan la programación, el diseño de interfaces y el trabajo en
+              equipo. Participé en proyectos académicos y busco seguir creciendo
+              en el área de desarrollo web y de software. En mi tiempo libre
+              disfruto de jugar videojuegos, escuchar música y compartir
+              momentos con mi familia y mis mascotas.
             </p>
           </Section>
 
           <Section title="Habilidades">
-            <List items={[
-              "Desarrollo Web (HTML, CSS, JS)",
-              "Programación en C, C#, Java, React",
-              "Gestión de Proyectos",
-              "Trabajo en Equipo",
-            ]} />
+            <List
+              items={[
+                "Desarrollo Web (HTML, CSS, JS)",
+                "Programación en C, C#, Java, React",
+                "Gestión de Proyectos",
+                "Trabajo en Equipo",
+              ]}
+            />
           </Section>
 
           <Section title="Música Favorita">
@@ -161,12 +182,19 @@ export default function Paola() {
           <Section title="Películas Favoritas">
             <ul className="list">
               {movies.map((m) => (
-                <li key={m.name} style={{ display: "flex", gap: 8, alignItems: "center" }}>
+                <li
+                  key={m.name}
+                  style={{ display: "flex", gap: 8, alignItems: "center" }}
+                >
                   <button
                     className="btn"
                     onClick={() => openMovieModal(m.id)}
                     disabled={!m.id || !HAS_TMDB}
-                    title={!HAS_TMDB ? "Configura la API key en .env" : "Ver info de TMDB"}
+                    title={
+                      !HAS_TMDB
+                        ? "Configura la API key en .env"
+                        : "Ver info de TMDB"
+                    }
                   >
                     Ver info
                   </button>
@@ -177,7 +205,9 @@ export default function Paola() {
           </Section>
 
           <Section title="Selección Actual">
-            <p id="seleccion-actual" className="card__meta">{seleccion}</p>
+            <p id="seleccion-actual" className="card__meta">
+              {seleccion}
+            </p>
           </Section>
 
           <ActionsBar
@@ -201,5 +231,3 @@ export default function Paola() {
     </div>
   );
 }
-
-

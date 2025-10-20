@@ -1,6 +1,8 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import PageTitle from "../../components/PageTitle";
+import SidebarPerfiles from "../../components/SidebarPerfiles";
 import "../../styles/profiles/santi.css";
 
 export default function Santiago() {
@@ -149,7 +151,10 @@ export default function Santiago() {
   return (
     <div>
       <PageTitle title="Santiago | DIVCENTRADO" />
-      <Link id="btn-home" to="/">Portada</Link>
+      <SidebarPerfiles />
+      <Link id="btn-home" to="/">
+        Portada
+      </Link>
       <header>
         <h1 className="jersey-15-regular">Santiago Agustín Rojas</h1>
         <h2>

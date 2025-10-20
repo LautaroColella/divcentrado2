@@ -15,28 +15,26 @@ export default function SidebarPerfiles() {
   const location = useLocation();
 
   useEffect(() => {
-  const mostrarBarra = (e: MouseEvent) => {
-    const dentroDeBarra = document
-      .querySelector(".barra-perfiles")
-      ?.getBoundingClientRect();
-    const estaSobreBarra =
-      dentroDeBarra && e.clientY <= dentroDeBarra.bottom;
+    const mostrarBarra = (e: MouseEvent) => {
+      const dentroDeBarra = document
+        .querySelector(".barra-perfiles")
+        ?.getBoundingClientRect();
+      const estaSobreBarra = dentroDeBarra && e.clientY <= dentroDeBarra.bottom;
 
-    if (e.clientY < 10 || estaSobreBarra) {
-      setVisible(true);
-    } else {
-      setVisible(false);
-    }
-  };
+      if (e.clientY < 70 || estaSobreBarra) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+    };
 
-  window.addEventListener("mousemove", mostrarBarra);
-  return () => window.removeEventListener("mousemove", mostrarBarra);
-}, []);
-
+    window.addEventListener("mousemove", mostrarBarra);
+    return () => window.removeEventListener("mousemove", mostrarBarra);
+  }, []);
 
   return (
-    <header className={`barra-perfiles ${visible ? "visible" : ""}`}>
-      <nav>
+    <div className={`barra-perfiles ${visible ? "visible" : ""}`}>
+      <div>
         <ul className="barra-lista">
           {perfiles.map((p, i) => (
             <li key={i}>
@@ -49,7 +47,7 @@ export default function SidebarPerfiles() {
             </li>
           ))}
         </ul>
-      </nav>
-    </header>
+      </div>
+    </div>
   );
 }

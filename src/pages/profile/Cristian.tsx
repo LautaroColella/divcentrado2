@@ -4,6 +4,7 @@ import { NavLink } from "react-router-dom";
 import FlipCard from "../../components/CardCristian/FlipCard";
 import SocialGrid from "../../components/CardCristian/SocialGrid";
 import PageTitle from "../../components/PageTitle";
+import SidebarPerfiles from "../../components/SidebarPerfiles";
 import styles from "../../styles/profiles/cristian/cristian.module.css";
 
 type FraseRotativaProps = { frases: string[] };
@@ -24,6 +25,7 @@ export default function Cristian() {
   return (
     <section id="profile-cristian" className={styles.page}>
       <PageTitle title="Cristian | DIVCENTRADO" />
+      <SidebarPerfiles />
       {/* Volver a portada (FUERA del wrapper) */}
       <NavLink to="/nombre" className={styles.backBtn}>
         ← Volver a la portada

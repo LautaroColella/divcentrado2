@@ -1,23 +1,19 @@
 /*  Fondo para mi página  */
 :global(#profile-cristian) {
-  background-image: linear-gradient(
-    to right top,
-    #3d0404, #420418, #440726, #431035, #3d1943,
-    #352553, #263060, #003b6b, #004a71, #005561,
-    #005c3e, #205f0f
-  );
+  background-image: linear-gradient(to right top,
+      #3d0404, #420418, #440726, #431035, #3d1943,
+      #352553, #263060, #003b6b, #004a71, #005561,
+      #005c3e, #205f0f);
   background-attachment: fixed;
   background-size: cover;
   min-height: 100vh;
 
- 
+
   padding: 16px 0;
 }
 
 
-:global(#profile-cristian) .page {
-  
-}
+:global(#profile-cristian) .page {}
 
 /*  Botón de volver*/
 :global(#profile-cristian) .backBtn {
@@ -40,11 +36,15 @@
   box-shadow: none;
 
 
-  margin: 0 auto 12px;
+  margin: 60px auto 12px;
   display: block;
   max-width: max-content;
 }
-:global(#profile-cristian) .backBtn:hover { filter: brightness(1.1); }
+
+:global(#profile-cristian) .backBtn:hover {
+  filter: brightness(1.1);
+}
+
 :global(#profile-cristian) .backBtn:focus-visible {
   outline: 2px solid #66b2ff;
   outline-offset: 2px;
@@ -81,7 +81,9 @@
   border-radius: 10px;
 }
 
-:global(#profile-cristian) .title { margin: 8px 0; }
+:global(#profile-cristian) .title {
+  margin: 8px 0;
+}
 
 :global(#profile-cristian) .right {
   flex: 2;
@@ -91,11 +93,21 @@
 }
 
 /* Listas internas */
-:global(#profile-cristian) .list { list-style: none; margin: 0; padding: 0; }
-:global(#profile-cristian) .list li { margin: 5px 0; font-weight: 500; }
+:global(#profile-cristian) .list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+:global(#profile-cristian) .list li {
+  margin: 5px 0;
+  font-weight: 500;
+}
 
 
-:global(#profile-cristian) .frase { margin-top: 8px; }
+:global(#profile-cristian) .frase {
+  margin-top: 8px;
+}
 
 /*  Media queries */
 @media (max-width: 1200px) {
@@ -103,6 +115,7 @@
     max-width: 1000px;
     padding: 15px;
   }
+
   :global(#profile-cristian) .right {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
@@ -113,6 +126,7 @@
     flex-direction: column;
     align-items: center;
   }
+
   :global(#profile-cristian) .right {
     grid-template-columns: 1fr 1fr;
     width: 100%;
