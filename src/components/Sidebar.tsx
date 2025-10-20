@@ -6,6 +6,7 @@ const secciones = [
   { nombre: "Portada", ruta: "/nombre" },
   { nombre: "Trabajo", ruta: "/trabajo" },
   { nombre: "Bitácora", ruta: "/bitacora" },
+  { nombre: "Proyectos", ruta: "/proyectos" },
 ];
 
 const perfiles = [

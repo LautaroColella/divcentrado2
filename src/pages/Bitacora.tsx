@@ -10,7 +10,7 @@ const logData = [
     tasks: [
       { title: "Creación del repo y Routing", assignee: "Lau" },
       { title: "Deploy a Vercel", assignee: "Cristian" },
-      { title: "Componente Sidebar y Docs", assignee: "Santiago o Silvana" },
+      { title: "Componente Sidebar y Docs", assignee: "Santiago y Silvana" },
       { title: "Diagramas de Arquitectura", assignee: "Paola" },
       { title: "Componentes de Perfil", assignee: "Cada integrante" },
     ],
@@ -50,9 +50,9 @@ export default function Bitacora() {
       >
         <h2 className="mb-4 text-center">Bitácora del Proyecto Web 🚀</h2>
 
-        {logData.map((entry, index) => (
+        {logData.map((entry) => (
           <LogEntry
-            key={index}
+            key={entry.date}
             date={entry.date}
             content={entry.content}
             tasks={entry.tasks}
