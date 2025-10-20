@@ -1,4 +1,3 @@
-import React from "react";
 import s from "../../styles/profiles/cristian/socialgrid.module.css";
 
 export default function SocialGrid() {

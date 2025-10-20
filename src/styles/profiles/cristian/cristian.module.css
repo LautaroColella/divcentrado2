@@ -1,8 +1,61 @@
+/*  Fondo para mi página  */
+:global(#profile-cristian) {
+  background-image: linear-gradient(
+    to right top,
+    #3d0404, #420418, #440726, #431035, #3d1943,
+    #352553, #263060, #003b6b, #004a71, #005561,
+    #005c3e, #205f0f
+  );
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 100vh;
+
+ 
+  padding: 16px 0;
+}
+
+
+:global(#profile-cristian) .page {
+  
+}
+
+/*  Botón de volver*/
+:global(#profile-cristian) .backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 600;
+  text-decoration: none !important;
+  color: #fff;
+
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: #003b6b;
+  width: fit-content;
+
+  border: none;
+  box-shadow: none;
+
+
+  margin: 0 auto 12px;
+  display: block;
+  max-width: max-content;
+}
+:global(#profile-cristian) .backBtn:hover { filter: brightness(1.1); }
+:global(#profile-cristian) .backBtn:focus-visible {
+  outline: 2px solid #66b2ff;
+  outline-offset: 2px;
+}
+
+/*  Estructura principal del perfil*/
 :global(#profile-cristian) .wrapper {
   display: flex;
   gap: 30px;
   max-width: 1200px;
-  margin: 40px auto;
+  margin: 0 auto;
   padding: 20px;
 }
 
@@ -28,9 +81,7 @@
   border-radius: 10px;
 }
 
-:global(#profile-cristian) .title {
-  margin: 8px 0;
-}
+:global(#profile-cristian) .title { margin: 8px 0; }
 
 :global(#profile-cristian) .right {
   flex: 2;
@@ -39,54 +90,14 @@
   gap: 20px;
 }
 
-/* === Listas internas === */
-:global(#profile-cristian) .list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+/* Listas internas */
+:global(#profile-cristian) .list { list-style: none; margin: 0; padding: 0; }
+:global(#profile-cristian) .list li { margin: 5px 0; font-weight: 500; }
 
-:global(#profile-cristian) .list li {
-  margin: 5px 0;
-  font-weight: 500;
-}
 
-/* === Frase rotativa === */
-:global(#profile-cristian) .frase {
-  margin-top: 8px;
-}
+:global(#profile-cristian) .frase { margin-top: 8px; }
 
-/* === Botón de volver a la portada === */
-:global(#profile-cristian) .backBtn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-
-  font-size: 1rem;
-  line-height: 1.2;
-  font-weight: 600;
-  text-decoration: none !important;
-  color: #fff;
-
-  padding: 8px 12px;
-  border-radius: 8px;
-  background: #003b6b;
-  width: fit-content;
-
-  border: none;
-  box-shadow: none;
-}
-
-:global(#profile-cristian) .backBtn:hover {
-  filter: brightness(1.1);
-}
-
-:global(#profile-cristian) .backBtn:focus-visible {
-  outline: 2px solid #66b2ff;
-  outline-offset: 2px;
-}
-
-/* === Media queries === */
+/*  Media queries */
 @media (max-width: 1200px) {
   :global(#profile-cristian) .wrapper {
     max-width: 1000px;
@@ -100,6 +111,7 @@
 @media (max-width: 900px) {
   :global(#profile-cristian) .wrapper {
     flex-direction: column;
+    align-items: center;
   }
   :global(#profile-cristian) .right {
     grid-template-columns: 1fr 1fr;
