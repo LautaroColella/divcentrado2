@@ -8,11 +8,12 @@ const logData = [
       "Se dio inicio a la segunda entrega del proyecto, planificando y distribuyendo las nuevas tareas entre los miembros del equipo.",
     ],
     tasks: [
-      { title: "Creación del repo y Routing", assignee: "Lau" },
-      { title: "Deploy a Vercel", assignee: "Cristian" },
-      { title: "Componente Sidebar y Docs", assignee: "Santiago y Silvana" },
-      { title: "Diagramas de Arquitectura", assignee: "Paola" },
-      { title: "Componentes de Perfil", assignee: "Cada integrante" },
+      { title: "Repo, routing, json, api", assignee: "Lautaro" },
+      { title: "Deploy a vercel", assignee: "Cristian" },
+      { title: "Componente sidebar", assignee: "Silvana" },
+      { title: "Diagramas de arquitectura", assignee: "Paola" },
+      { title: "Actualización bitácora y README", assignee: "Santiago" },
+      { title: "Perfil", assignee: "Cada integrante" },
     ],
   },
   {
