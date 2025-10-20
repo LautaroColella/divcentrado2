@@ -4,7 +4,7 @@ import "../styles/sidebar.css";
 
 const secciones = [
   { nombre: "Portada", ruta: "/nombre" },
-  { nombre: "Trabajo y Proyecto", ruta: "/trabajo" },
+  { nombre: "Trabajo", ruta: "/trabajo" },
   { nombre: "Bitácora", ruta: "/bitacora" },
 ];
 
@@ -26,12 +26,12 @@ export default function Sidebar() {
         .querySelector(".barra-superior")
         ?.getBoundingClientRect();
       const estaSobreBarra = barra && e.clientY <= barra.bottom;
-      setVisible(e.clientY < 10 || !!estaSobreBarra);
+      setVisible(e.clientY < 30 || !!estaSobreBarra);
     };
 
     const handleTouchStart = (e: TouchEvent) => {
       const touchY = e.touches[0].clientY;
-      if (touchY < 10) setVisible(true);
+      if (touchY < 30) setVisible(true);
     };
 
     window.addEventListener("mousemove", handleMouseMove);
@@ -43,7 +43,7 @@ export default function Sidebar() {
   }, []);
 
   return (
-    <div className={`barra-perfiles ${visible ? "visible" : ""}`}>
+    <div className={`barra-superior ${visible ? "visible" : ""}`}>
       <div>
         <ul className="barra-lista">
           {[...secciones, ...perfiles].map((item, i) => (
