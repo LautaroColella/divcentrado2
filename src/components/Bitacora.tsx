@@ -12,7 +12,7 @@ const logData = [
     tasks: [
       { title: "Creación del repo y Routing", assignee: "Lau" },
       { title: "Deploy a Vercel", assignee: "Cristian" },
-      { title: "Componente Sidebar y Docs", assignee: "Santiago o Silvana" },
+      { title: "Componente Sidebar y Docs", assignee: "Santiago y Silvana" },
       { title: "Diagramas de Arquitectura", assignee: "Paola" },
       { title: "Componentes de Perfil", assignee: "Cada integrante" },
     ],

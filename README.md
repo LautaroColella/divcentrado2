@@ -134,3 +134,8 @@ src/
 ## 🌳 Diagrama de arbol de renderizado 
 
 ![Diagrama de arbol](./src/assets/img/ArbolDeRenderizadoyRutas.drawio.png)
+
+
+## Estructura de Archivos 
+
+![Estructura de archivos](./src/assets/img/estructuraCarpetaArchivos.drawio.png) 

@@ -7,8 +7,6 @@ import "../../styles/profiles/santi.css";
 
 export default function Santiago() {
   useEffect(() => {
-    // Evitar doble inicialización en modo estricto
-    const PARTICLES_FLAG = "__particles_initialized__";
     // Configuración de particles.js (una sola vez)
     const particlesConfig = {
       particles: {
@@ -52,7 +50,7 @@ export default function Santiago() {
           random: true,
           anim: {
             enable: false,
-            speed: 40,
+            speed: 70,
             size_min: 0.1,
             sync: false,
           },
@@ -125,31 +123,53 @@ export default function Santiago() {
 
     // Función para inicializar particles.js
     const initParticles = () => {
-      if ((window as any)[PARTICLES_FLAG]) return;
+      const container = document.getElementById("particles-js");
+      if (!container) return;
+
+      // Limpia cualquier canvas previo dentro del contenedor
+      while (container.firstChild) {
+        container.removeChild(container.firstChild);
+      }
+
       if (window.particlesJS) {
         window.particlesJS("particles-js", particlesConfig);
-        (window as any)[PARTICLES_FLAG] = true;
-      } else {
-        // Cargar particles.js si no está disponible
-        script = document.createElement("script");
-        script.src =
-          "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js";
-        script.onload = () => {
-          window.particlesJS("particles-js", particlesConfig);
-          (window as any)[PARTICLES_FLAG] = true;
-        };
-        document.head.appendChild(script);
+        return;
       }
+
+      // Evita inyectar el script más de una vez
+      const existing = Array.from(document.getElementsByTagName("script")).find(
+        (s) => s.src.includes("particles.min.js")
+      );
+      if (existing) {
+        existing.addEventListener("load", () => {
+          window.particlesJS("particles-js", particlesConfig);
+        }, { once: true });
+        return;
+      }
+
+      script = document.createElement("script");
+      script.src = "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js";
+      script.onload = () => {
+        window.particlesJS("particles-js", particlesConfig);
+      };
+      document.head.appendChild(script);
     };
 
     initParticles();
 
-    // No retiramos el script para evitar re-montajes en modo estricto
-    return () => {};
+    // Limpia el contenedor al desmontar para evitar duplicaciones al re-montar
+    return () => {
+      const container = document.getElementById("particles-js");
+      if (container) {
+        while (container.firstChild) {
+          container.removeChild(container.firstChild);
+        }
+      }
+    };
   }, []);
 
   return (
-    <div>
+    <div className="santiago-page">
       <PageTitle title="Santiago | DIVCENTRADO" />
       <SidebarPerfiles />
       <Link id="btn-home" to="/">
