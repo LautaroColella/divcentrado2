@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import FlipCard from "../../components/CardCristian/FlipCard";
 import SocialGrid from "../../components/CardCristian/SocialGrid";
@@ -17,12 +18,14 @@ function FraseRotativa({ frases }: FraseRotativaProps) {
 
 export default function Cristian() {
   return (
-    <section className={styles.wrapper}>
+    <section id="profile-cristian" className={styles.wrapper}>
+      {/* Volver a portada */}
+      <NavLink to="/nombre" className={styles.backBtn}>← Volver a la portada</NavLink>
+
       {/* Bloque izquierdo */}
       <aside className={styles.left}>
         <div className={styles.fotoBox}>
-          {/*public/images/cristian.jpg */}
-          <img src="..\..\src\assets\img\cristianSalchiantonio.jpg" alt="H. Cristian Páez" />
+          <img src="/src/assets/img/cristianSalchiantonio.jpg" alt="H. Cristian Páez" />
         </div>
         <h1 className={styles.title}>H. Cristian Páez</h1>
         <p><strong>Ciudad:</strong> Tucumán</p>
