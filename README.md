@@ -128,3 +128,8 @@ src/
 ├── main.tsx           # Punto de entrada de la aplicación
 └── router.tsx         # Configuración de rutas
 ```
+---
+
+## 🌳 Diagrama de arbol de renderizado 
+
+![Diagrama de arbol](./src/assets/img/ArbolDeRenderizadoyRutas.drawio.png)

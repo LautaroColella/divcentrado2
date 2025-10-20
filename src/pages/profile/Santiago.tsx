@@ -1,9 +1,12 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import PageTitle from "../../components/PageTitle";
 import "../../styles/profiles/santi.css";
 
 export default function Santiago() {
   useEffect(() => {
+    // Evitar doble inicialización en modo estricto
+    const PARTICLES_FLAG = "__particles_initialized__";
     // Configuración de particles.js (una sola vez)
     const particlesConfig = {
       particles: {
@@ -120,15 +123,18 @@ export default function Santiago() {
 
     // Función para inicializar particles.js
     const initParticles = () => {
+      if ((window as any)[PARTICLES_FLAG]) return;
       if (window.particlesJS) {
-        window.particlesJS(particlesConfig);
+        window.particlesJS("particles-js", particlesConfig);
+        (window as any)[PARTICLES_FLAG] = true;
       } else {
         // Cargar particles.js si no está disponible
         script = document.createElement("script");
         script.src =
           "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js";
         script.onload = () => {
-          window.particlesJS(particlesConfig);
+          window.particlesJS("particles-js", particlesConfig);
+          (window as any)[PARTICLES_FLAG] = true;
         };
         document.head.appendChild(script);
       }
@@ -136,18 +142,14 @@ export default function Santiago() {
 
     initParticles();
 
-    // Función de cleanup
-    return () => {
-      if (script && document.head.contains(script)) {
-        document.head.removeChild(script);
-      }
-    };
+    // No retiramos el script para evitar re-montajes en modo estricto
+    return () => {};
   }, []);
 
   return (
     <div>
       <PageTitle title="Santiago | DIVCENTRADO" />
-      <a id="btn-home">Portada</a>
+      <Link id="btn-home" to="/">Portada</Link>
       <header>
         <h1 className="jersey-15-regular">Santiago Agustín Rojas</h1>
         <h2>

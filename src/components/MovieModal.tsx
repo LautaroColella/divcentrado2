@@ -22,10 +22,7 @@ interface RelatedMovie {
   poster_path: string | null;
 }
 
-const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
-if (!API_KEY) {
-  throw new Error("TMDB API key no encontrada. Revisar archivo .env");
-}
+const API_KEY: string | undefined = import.meta.env.VITE_TMDB_API_KEY;
 const BASE_URL = "https://api.themoviedb.org/3";
 
 const MovieModal: React.FC<MovieModalProps> = ({ movieId, show, onClose }) => {
@@ -35,6 +32,10 @@ const MovieModal: React.FC<MovieModalProps> = ({ movieId, show, onClose }) => {
 
   useEffect(() => {
     if (!movieId) return;
+    if (!API_KEY) {
+      console.warn("TMDB API key no encontrada. Define VITE_TMDB_API_KEY en .env");
+      return;
+    }
 
     const fetchMovie = async () => {
       setLoading(true);
@@ -61,6 +62,7 @@ const MovieModal: React.FC<MovieModalProps> = ({ movieId, show, onClose }) => {
   }, [movieId]);
 
   if (!show) return null;
+  if (!API_KEY) return null;
 
   return (
     <div

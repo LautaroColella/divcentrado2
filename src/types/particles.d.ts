@@ -1,6 +1,6 @@
 declare global {
   interface Window {
-    particlesJS: (config: any) => void;
+    particlesJS: (tagId: string, config: any) => void;
   }
 }
 
