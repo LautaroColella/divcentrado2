@@ -1,63 +1,66 @@
 .santiago-page {
-	overflow-x: hidden; 
+	overflow-x: hidden;
 	margin: 0;
 	padding: 0;
-  }
+}
 
 
-.santiago-page #particles-js{
-	background-color:black;
-	position: fixed;   
+.santiago-page #particles-js {
+	background-color: black;
+	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100vw;      
-	height: 100vh;     
-	z-index: 1;        
+	width: 100vw;
+	height: 100vh;
+	z-index: 1;
 	margin: 0;
 	padding: 0;
 	pointer-events: auto;
-  }
-  
+}
+
 
 /* text color unified later */
 
- 
-.santiago-page header, .santiago-page main, .santiago-page footer {
+
+.santiago-page header,
+.santiago-page main,
+.santiago-page footer {
 	position: relative;
 	z-index: 2;
 	pointer-events: auto;
-  }
+}
 
-  
+
 .santiago-page #particles-js canvas {
 	pointer-events: auto;
-  }
+}
 
-  
+
 
 .santiago-page header {
 	text-align: center;
 	padding: 2rem 1rem;
-  }
-  
+	margin-top: 1rem;
+}
+
 .santiago-page header h1 {
 	font-size: 2.5rem;
-	color: white ;
+	color: white;
 	margin-bottom: 0.5rem;
 	font-family: "Jersey 15", sans-serif;
-  }
-  
+}
+
 .santiago-page header h2 {
 	font-size: 1.2rem;
 	color: #ddd;
 	font-weight: 400;
-  }
-  
+}
+
 .santiago-page #hi {
 	width: 80px;
 	vertical-align: middle;
-  }
-  
+}
+
 .santiago-page #icon {
 	margin-top: 1rem;
 	width: 120px;
@@ -65,40 +68,41 @@
 	border-radius: 50%;
 	border: 3px solid #ffb347;
 	object-fit: cover;
- 	background-color: black;
-  }
-  
+	background-color: black;
+}
+
 /* === MAIN === */
 .santiago-page main {
 	max-width: 900px;
 	margin: auto;
 	padding: 2rem 1rem;
-  }
-  
+}
+
 .santiago-page section {
 	background: rgba(255, 255, 255, 0.05);
 	border-radius: 12px;
 	padding: 1.5rem;
 	margin-bottom: 2rem;
-	box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  }
-  
-.santiago-page section h2, .santiago-page section h3 {
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.santiago-page section h2,
+.santiago-page section h3 {
 	margin-bottom: 1rem;
 	color: #ffb347;
 	font-family: "Jersey 15", sans-serif;
-  }
-  
+}
+
 .santiago-page ul {
 	list-style-type: square;
 	margin-left: 1.5rem;
-  }
-  
+}
+
 .santiago-page ul li {
 	margin-bottom: 0.5rem;
-  }
+}
 
-.santiago-page #btn-home{
+.santiago-page #btn-home {
 	color: #ddd;
 	background-color: black;
 	border: 2px solid #ffffff;
@@ -121,54 +125,57 @@
 	box-shadow: 0 4px 8px red;
 }
 
-  
- 
+
+
 .santiago-page .img {
 	display: block;
 	margin: 1rem auto;
 	max-width: 250px;
 	border-radius: 10px;
-	box-shadow: 0 3px 8px rgba(0,0,0,0.4);
-  }
-  
-  
+	box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
+}
+
+
 .santiago-page a {
 	color: #ffb347;
 	text-decoration: none;
 	transition: 0.3s;
-  }
-  
+}
+
 .santiago-page a:hover {
 	text-decoration: underline;
 	color: #ffd27f;
-  }
-  
-  
+}
+
+
 /* === RESPONSIVE === */
-  @media (max-width: 600px) {
+@media (max-width: 600px) {
 	.santiago-page header h1 {
-	  font-size: 2rem;
+		font-size: 2rem;
 	}
-  
+
 	.santiago-page #icon {
-	  width: 90px;
-	  height: 90px;
+		width: 90px;
+		height: 90px;
 	}
-  
+
 	.santiago-page .img {
-	  max-width: 180px;
+		max-width: 180px;
 	}
-  }
+}
+
 .santiago-page .jersey-15-regular {
 	font-family: "Jersey 15", sans-serif;
 	font-weight: 400;
 	font-style: normal;
-  }
+}
+
 /* Force all text to white on Santiago page */
 .santiago-page,
 .santiago-page * {
 	color: #ffffff;
 }
+
 .santiago-page a,
 .santiago-page a:hover,
 .santiago-page #btn-home,
@@ -177,4 +184,3 @@
 .santiago-page section h3 {
 	color: #ffffff;
 }
-  

@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
 import PageTitle from "../../components/PageTitle";
 import Sidebar from "../../components/Sidebar";
 import "../../styles/profiles/santi.css";
@@ -177,9 +176,6 @@ export default function Santiago() {
     <div className="santiago-page">
       <PageTitle title="Santiago | DIVCENTRADO" />
       <Sidebar />
-      <Link id="btn-home" to="/">
-        Portada
-      </Link>
       <header>
         <h1 className="jersey-15-regular">Santiago Agustín Rojas</h1>
         <h2>

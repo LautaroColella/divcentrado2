@@ -2,7 +2,6 @@ import { useRef, useState } from "react";
 import {
   ActionsBar,
   List,
-  PageBack,
   ProfileCard,
   Section,
 } from "../../components/CardPaola";
@@ -126,9 +125,6 @@ export default function Paola() {
     <div className="paola-scope">
       <PageTitle title="Paola | DIVCENTRADO" />
       <Sidebar />
-
-      {/* Header*/}
-      <PageBack to="/" />
 
       {/*Card*/}
       <ProfileCard ref={cardRef} backgroundUrl={bgActual}>

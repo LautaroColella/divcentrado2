@@ -5,7 +5,6 @@ import PageTitle from "../../components/PageTitle";
 import Sidebar from "../../components/Sidebar";
 import SilvanaAvatar from "../../components/SilvanaAvatar";
 import SilvanaBloque from "../../components/SilvanaBloque";
-import SilvanaBotonVolver from "../../components/SilvanaBotonVolver";
 import SilvanaDatos from "../../components/SilvanaDatos";
 import SilvanaPresentacion from "../../components/SilvanaPresentacion";
 import "../../styles/profiles/silvana/silvanaStyleAudaz.css";
@@ -103,8 +102,6 @@ export default function Silvana() {
             tipo="bloque-musica"
           />
         </section>
-
-        <SilvanaBotonVolver />
       </main>
     </>
   );

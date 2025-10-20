@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 
 import FlipCard from "../../components/CardCristian/FlipCard";
 import SocialGrid from "../../components/CardCristian/SocialGrid";
@@ -26,10 +25,6 @@ export default function Cristian() {
     <section id="profile-cristian" className={styles.page}>
       <PageTitle title="Cristian | DIVCENTRADO" />
       <Sidebar />
-      {/* Volver a portada (FUERA del wrapper) */}
-      <NavLink to="/nombre" className={styles.backBtn}>
-        ← Volver a la portada
-      </NavLink>
 
       {/* Wrapper de dos columnas */}
       <section className={styles.wrapper}>

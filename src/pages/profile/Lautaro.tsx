@@ -115,11 +115,6 @@ const Lautaro: React.FC = () => {
 
           <hr />
           <p className="card-text text-center mt-2">Mar del Plata, 22 años</p>
-          <div className="card-footer text-center bg-transparent border-0">
-            <a href="../../nombre" className="btn btn-primary">
-              <i className="fa-solid fa-chevron-left"></i> Portada
-            </a>
-          </div>
         </div>
       </div>
       <div

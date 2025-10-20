@@ -8,46 +8,7 @@
   background-size: cover;
   min-height: 100vh;
 
-
   padding: 16px 0;
-}
-
-
-:global(#profile-cristian) .page {}
-
-/*  Botón de volver*/
-:global(#profile-cristian) .backBtn {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-
-  font-size: 1rem;
-  line-height: 1.2;
-  font-weight: 600;
-  text-decoration: none !important;
-  color: #fff;
-
-  padding: 8px 12px;
-  border-radius: 8px;
-  background: #003b6b;
-  width: fit-content;
-
-  border: none;
-  box-shadow: none;
-
-
-  margin: 60px auto 12px;
-  display: block;
-  max-width: max-content;
-}
-
-:global(#profile-cristian) .backBtn:hover {
-  filter: brightness(1.1);
-}
-
-:global(#profile-cristian) .backBtn:focus-visible {
-  outline: 2px solid #66b2ff;
-  outline-offset: 2px;
 }
 
 /*  Estructura principal del perfil*/
@@ -56,6 +17,7 @@
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
+  margin-top: 2rem;
   padding: 20px;
 }
 
