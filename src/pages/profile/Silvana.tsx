@@ -1,13 +1,14 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import silvanaAudaz from "../../assets/img/silvanaAudaz.jpg";
 import silvanaSuave from "../../assets/img/silvanaSuave.jpg";
 import PageTitle from "../../components/PageTitle";
+import SidebarPerfiles from "../../components/SidebarPerfiles";
 import SilvanaAvatar from "../../components/SilvanaAvatar";
 import SilvanaBloque from "../../components/SilvanaBloque";
 import SilvanaBotonVolver from "../../components/SilvanaBotonVolver";
 import SilvanaDatos from "../../components/SilvanaDatos";
 import SilvanaPresentacion from "../../components/SilvanaPresentacion";
+import "../../styles/perfil.css";
 import "../../styles/profiles/silvana/silvanaStyleAudaz.css";
 import "../../styles/profiles/silvana/silvanaStyleBase.css";
 import "../../styles/profiles/silvana/silvanaStyleSuave.css";
@@ -16,8 +17,21 @@ export default function Silvana() {
   const [modo, setModo] = useState<"suave" | "audaz">("suave");
   const [avatar, setAvatar] = useState(silvanaSuave);
 
-  const activarAudaz = () => setModo("audaz");
-  const activarSuave = () => setModo("suave");
+  const alternarModo = () => {
+    setModo((prevModo) => (prevModo === "suave" ? "audaz" : "suave"));
+  };
+
+  useEffect(() => {
+    document.body.classList.remove("modo-suave", "modo-audaz");
+    document.body.classList.add(modo === "suave" ? "modo-suave" : "modo-audaz");
+    setAvatar(modo === "suave" ? silvanaSuave : silvanaAudaz);
+  }, [modo]);
+
+  const datos = {
+    nombre: "Silvana Fernández",
+    edad: "42 años",
+    ubicacion: "Gral Roca, Río Negro",
+  };
 
   const contenido = {
     suave: {
@@ -50,54 +64,49 @@ export default function Silvana() {
     },
   };
 
-  useEffect(() => {
-    document.body.classList.remove("modo-suave", "modo-audaz");
-    document.body.classList.add(modo === "suave" ? "modo-suave" : "modo-audaz");
-    setAvatar(modo === "suave" ? silvanaSuave : silvanaAudaz);
-  }, [modo]);
-
-  const datos = {
-    nombre: "Silvana Fernández",
-    edad: "42 años",
-    ubicacion: "Gral Roca, Río Negro",
-  };
-
   return (
-    <main className="presentacion">
-      <PageTitle title="Silvana | DIVCENTRADO" />
-      <h1 className="frase-titulo">{contenido[modo].frase}</h1>
+    <>
+      <SidebarPerfiles />
+      <main className="presentacion">
+        <PageTitle title="Silvana | DIVCENTRADO" />
+        <h1 className="frase-titulo">{contenido[modo].frase}</h1>
 
-      <section className="seccion-central">
-        <SilvanaDatos
-          nombre={datos.nombre}
-          edad={datos.edad}
-          ubicacion={datos.ubicacion}
-        />
+        <section className="seccion-central">
+          <SilvanaDatos
+            nombre={datos.nombre}
+            edad={datos.edad}
+            ubicacion={datos.ubicacion}
+          />
 
-        <SilvanaPresentacion texto={contenido[modo].presentacion} />
-      </section>
+          <SilvanaAvatar
+            modo={modo}
+            imagen={avatar}
+            onMouseEnter={alternarModo}
+          />
 
-      <section className="bloques-info">
-        <SilvanaBloque
-          titulo="Habilidades"
-          items={contenido[modo].habilidades}
-          tipo="bloque-habilidades"
-        />
+          <SilvanaPresentacion texto={contenido[modo].presentacion} />
+        </section>
 
-        <SilvanaBloque
-          titulo="Películas favoritas"
-          items={contenido[modo].peliculas}
-          tipo="bloque-peliculas"
-        />
+        <section className="bloques-info">
+          <SilvanaBloque
+            titulo="Habilidades"
+            items={contenido[modo].habilidades}
+            tipo="bloque-habilidades"
+          />
+          <SilvanaBloque
+            titulo="Películas favoritas"
+            items={contenido[modo].peliculas}
+            tipo="bloque-peliculas"
+          />
+          <SilvanaBloque
+            titulo="Música favorita"
+            items={contenido[modo].musica}
+            tipo="bloque-musica"
+          />
+        </section>
 
-        <SilvanaBloque
-          titulo="Música favorita"
-          items={contenido[modo].musica}
-          tipo="bloque-musica"
-        />
-      </section>
-
-      <SilvanaBotonVolver />
-    </main>
+        <SilvanaBotonVolver />
+      </main>
+    </>
   );
 }

@@ -1,0 +1,60 @@
+.barra-perfiles {
+  position: fixed;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(to right, #a2ffff, #ccffff);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  transition: top 0.8s ease;
+}
+
+/* Cuando se activa */
+.barra-perfiles.visible {
+  top: 0;
+}
+
+/* Lista horizontal  */
+.barra-lista {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Enlaces */
+.barra-lista li a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #0077cc;
+  transition: color 0.3s ease;
+  font-size: 1rem;
+}
+
+.barra-lista li a:hover {
+  color: #8a8bd4;
+}
+
+/* Perfil activo */
+.barra-lista li a.activo {
+  color: #333;
+  border-bottom: 2px solid #0077cc;
+}
+
+.perfil-portada {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding-top: 6rem; /* espacio para la barra superior */
+  background: linear-gradient(to right, #a2ffff, #ccffff);
+}
+
+.perfil-portada h1 {
+  font-size: 3rem;
+  color: #333;
+}

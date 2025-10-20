@@ -4,7 +4,7 @@
 
 body.modo-audaz {
   font-family: 'Anton', sans-serif;
-  background-image: url('/src/assets/img/silvanaFondoAudas.jpg');
+  background-image: url('/src/assets/img/silvanaFondoAudaz.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -17,95 +17,57 @@ body.modo-audaz {
 body.modo-audaz .frase-titulo {
   font-size: 2.5rem;
   color: #ffcc00;
-  text-align: center;
-  font-weight: 900;
   text-shadow: 2px 2px #d31f1f;
-}
-
-/* Sección central */
-.seccion-central {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2.5rem;
-  flex-wrap: wrap;
-  margin-bottom: 1rem;
+  font-weight: 900;
 }
 
 /* Avatar */
-.avatar-rectangular {
-  width: 220px;
-  height: 300px;
-  border-radius: 8px;
-  overflow: hidden;
+body.modo-audaz .avatar-rectangular {
   border: 4px solid #ffcc00;
   box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
-  transition: transform 0.3s ease;
-  cursor: pointer;
+  border-radius: 8px;
 }
-
 
 /* Datos personales */
-.info-lateral.izquierda {
-  text-align: right;
-  flex-direction: column;
-  justify-content: center;
-  font-weight: 800;
+body.modo-audaz .info-lateral.izquierda {
   color: #e9e0bc;
+  font-weight: 800;
 }
 
-
-.dato-secundario {
-  font-size: 1.5rem;
+body.modo-audaz .dato-secundario {
   color: #e9e0bc;
 }
 
 /* Presentación */
-.info--lateral.derecha {
-  max-width: 300px;
-  line-height: 1.5;
+body.modo-audaz .info--lateral.derecha {
   color: #fefefe;
   font-weight: 500;
 }
 
 /* Bloques temáticos */
-.bloques-info {
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-  flex-wrap: wrap;
-  margin-top: 1rem;
-}
-
-.bloque {
+body.modo-audaz .bloque {
   background-color: rgba(26, 26, 26, 0.85);
   border: 2px solid #ffcc00;
-  border-radius: 8px;
-  padding: 1rem 1.2rem;
-  width: 220px;
   box-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
-  transition: transform 0.3s ease;
   backdrop-filter: blur(4px);
+  border-radius: 8px;
 }
 
-.bloque:hover {
-  transform: scale(1.05);
+body.modo-audaz .bloque:hover {
   background-color: #330000;
+  transform: scale(1.05);
 }
 
-.bloque h2 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+body.modo-audaz .bloque h2 {
   color: #ffcc00;
   text-transform: uppercase;
 }
 
-.bloque ul li {
-  font-size: 0.95rem;
-  line-height: 1.4;
+body.modo-audaz .bloque ul li{
   color: #fefefe;
 }
-
+  
+/* Botón volver */
 body.modo-audaz .btn-volver-inferior {
   background-color: #ffcc00;
   color: #330000;
