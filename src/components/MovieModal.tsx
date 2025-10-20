@@ -33,7 +33,9 @@ const MovieModal: React.FC<MovieModalProps> = ({ movieId, show, onClose }) => {
   useEffect(() => {
     if (!movieId) return;
     if (!API_KEY) {
-      console.warn("TMDB API key no encontrada. Define VITE_TMDB_API_KEY en .env");
+      console.warn(
+        "TMDB API key no encontrada. Define VITE_TMDB_API_KEY en .env"
+      );
       return;
     }
 
@@ -50,7 +52,7 @@ const MovieModal: React.FC<MovieModalProps> = ({ movieId, show, onClose }) => {
           `${BASE_URL}/movie/${movieId}/recommendations?api_key=${API_KEY}&language=es-MX`
         );
         const relatedData = await relatedRes.json();
-        setRelated((relatedData.results || []).slice(0, 7));
+        setRelated((relatedData.results || []).slice(0, 6));
       } catch (error) {
         console.error("Error obteniendo la pelicula:", error);
       } finally {
