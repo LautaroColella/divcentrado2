@@ -10,8 +10,8 @@ import SilvanaAvatar from "../../components/SilvanaAvatar";
 import SilvanaPresentacion from "../../components/SilvanaPresentacion";
 import SilvanaDatos from "../../components/SilvanaDatos";
 import SilvanaBotonVolver from "../../components/SilvanaBotonVolver";
-import SidebarPerfiles from "../../components/SidebarPerfiles";
-import "../../styles/perfil.css";
+import Sidebar from "../../components/Sidebar";
+import "../../styles/sidebar.css";
 
 export default function Silvana() {
   const [modo, setModo] = useState<"suave" | "audaz">("suave");
@@ -55,7 +55,7 @@ export default function Silvana() {
 
   return (
     <> 
-      <SidebarPerfiles /> 
+      <Sidebar/> 
       <main className="presentacion">
         <h1 className="frase-titulo">{contenido[modo].frase}</h1>
 

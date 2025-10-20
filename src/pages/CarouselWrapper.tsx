@@ -5,18 +5,14 @@ import "../styles/carousel.css";
 
 import Bitacora from "../components/Bitacora";
 import Nombre from "../components/Nombre";
-import SidebarPerfiles from "../components/SidebarPerfiles";
 import Trabajo from "../components/Trabajo";
+import Sidebar from "../components/Sidebar";
+import "../styles/sidebar.css";
 
 const slides = [
   { component: <Nombre />, path: "/nombre", title: "Portada | DIVCENTRADO" },
   { component: <Trabajo />, path: "/trabajo", title: "Proyecto | DIVCENTRADO" },
-  { component: <SidebarPerfiles />, path: "/perfil", title: "Perfil | DIVCENTRADO" },
-  {
-    component: <Bitacora />,
-    path: "/bitacora",
-    title: "Bitácora | DIVCENTRADO",
-  },
+  { component: <Bitacora />, path: "/bitacora", title: "Bitácora | DIVCENTRADO" },
 ];
 
 export default function CarouselWrapper() {
@@ -51,41 +47,44 @@ export default function CarouselWrapper() {
   };
 
   return (
-    <div
-      className="main-carousel d-flex align-items-center justify-content-center position-relative"
-      style={{ height: "100vh" }}
-    >
-      <div className="carousel-inner h-100 w-100">
-        {slides.map((slide, i) => (
-          <div
-            key={i}
-            className={`carousel-item h-100 ${i === index ? "active" : ""}`}
-          >
-            {slide.component}
-          </div>
-        ))}
-      </div>
+    <>
+      <Sidebar/>
+      <div
+        className="main-carousel d-flex align-items-center justify-content-center position-relative"
+        style={{ height: "100vh" }}
+      >
+        <div className="carousel-inner h-100 w-100">
+          {slides.map((slide, i) => (
+            <div
+              key={i}
+              className={`carousel-item h-100 ${i === index ? "active" : ""}`}
+            >
+              {slide.component}
+            </div>
+          ))}
+        </div>
 
-      <button className="carousel-control-prev" onClick={prev}>
-        <i className="fa-solid fa-chevron-left fa-2x"></i>
-      </button>
-      <button className="carousel-control-next" onClick={next}>
-        <i className="fa-solid fa-chevron-right fa-2x"></i>
-      </button>
+        <button className="carousel-control-prev" onClick={prev}>
+          <i className="fa-solid fa-chevron-left fa-2x"></i>
+        </button>
+        <button className="carousel-control-next" onClick={next}>
+          <i className="fa-solid fa-chevron-right fa-2x"></i>
+        </button>
 
-      <div className="carousel-indicators">
-        {slides.map((_, i) => (
-          <button
-            key={i}
-            type="button"
-            className={i === index ? "active" : ""}
-            onClick={() => {
-              setIndex(i);
-              navigate(slides[i].path);
-            }}
-          />
-        ))}
+        <div className="carousel-indicators">
+          {slides.map((_, i) => (
+            <button
+              key={i}
+              type="button"
+              className={i === index ? "active" : ""}
+              onClick={() => {
+                setIndex(i);
+                navigate(slides[i].path);
+              }}
+            />
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
