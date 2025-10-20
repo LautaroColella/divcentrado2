@@ -8,7 +8,7 @@ import {
 } from "../../components/CardPaola";
 import MovieModal from "../../components/MovieModal";
 import PageTitle from "../../components/PageTitle";
-import SidebarPerfiles from "../../components/SidebarPerfiles";
+import Sidebar from "../../components/Sidebar";
 import "../../styles/profiles/alvarez.css";
 
 //FONDOS
@@ -125,7 +125,7 @@ export default function Paola() {
   return (
     <div className="paola-scope">
       <PageTitle title="Paola | DIVCENTRADO" />
-      <SidebarPerfiles />
+      <Sidebar />
 
       {/* Header*/}
       <PageBack to="/" />

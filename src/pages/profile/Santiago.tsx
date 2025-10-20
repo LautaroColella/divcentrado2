@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import PageTitle from "../../components/PageTitle";
-import SidebarPerfiles from "../../components/SidebarPerfiles";
+import Sidebar from "../../components/Sidebar";
 import "../../styles/profiles/santi.css";
 
 export default function Santiago() {
@@ -141,14 +141,19 @@ export default function Santiago() {
         (s) => s.src.includes("particles.min.js")
       );
       if (existing) {
-        existing.addEventListener("load", () => {
-          window.particlesJS("particles-js", particlesConfig);
-        }, { once: true });
+        existing.addEventListener(
+          "load",
+          () => {
+            window.particlesJS("particles-js", particlesConfig);
+          },
+          { once: true }
+        );
         return;
       }
 
       script = document.createElement("script");
-      script.src = "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js";
+      script.src =
+        "https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js";
       script.onload = () => {
         window.particlesJS("particles-js", particlesConfig);
       };
@@ -171,7 +176,7 @@ export default function Santiago() {
   return (
     <div className="santiago-page">
       <PageTitle title="Santiago | DIVCENTRADO" />
-      <SidebarPerfiles />
+      <Sidebar />
       <Link id="btn-home" to="/">
         Portada
       </Link>

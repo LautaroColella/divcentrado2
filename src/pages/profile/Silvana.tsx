@@ -2,13 +2,12 @@ import { useEffect, useState } from "react";
 import silvanaAudaz from "../../assets/img/silvanaAudaz.jpg";
 import silvanaSuave from "../../assets/img/silvanaSuave.jpg";
 import PageTitle from "../../components/PageTitle";
-import SidebarPerfiles from "../../components/SidebarPerfiles";
+import Sidebar from "../../components/Sidebar";
 import SilvanaAvatar from "../../components/SilvanaAvatar";
 import SilvanaBloque from "../../components/SilvanaBloque";
 import SilvanaBotonVolver from "../../components/SilvanaBotonVolver";
 import SilvanaDatos from "../../components/SilvanaDatos";
 import SilvanaPresentacion from "../../components/SilvanaPresentacion";
-import "../../styles/perfil.css";
 import "../../styles/profiles/silvana/silvanaStyleAudaz.css";
 import "../../styles/profiles/silvana/silvanaStyleBase.css";
 import "../../styles/profiles/silvana/silvanaStyleSuave.css";
@@ -66,7 +65,7 @@ export default function Silvana() {
 
   return (
     <>
-      <SidebarPerfiles />
+      <Sidebar />
       <main className="presentacion">
         <PageTitle title="Silvana | DIVCENTRADO" />
         <h1 className="frase-titulo">{contenido[modo].frase}</h1>

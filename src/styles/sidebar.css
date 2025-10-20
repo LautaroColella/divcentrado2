@@ -1,4 +1,4 @@
-.barra-perfiles {
+.barra-superior {
   position: fixed;
   top: -100px;
   left: 0;
@@ -10,23 +10,20 @@
   transition: top 0.8s ease;
 }
 
-/* Cuando se activa */
-.barra-perfiles.visible {
+.barra-superior.visible {
   top: 0;
 }
 
-/* Lista horizontal  */
 .barra-lista {
   display: flex;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
   justify-content: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* Enlaces */
 .barra-lista li a {
   text-decoration: none;
   font-weight: bold;
@@ -39,22 +36,7 @@
   color: #8a8bd4;
 }
 
-/* Perfil activo */
 .barra-lista li a.activo {
   color: #333;
   border-bottom: 2px solid #0077cc;
-}
-
-.perfil-portada {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  padding-top: 6rem; /* espacio para la barra superior */
-  background: linear-gradient(to right, #a2ffff, #ccffff);
-}
-
-.perfil-portada h1 {
-  font-size: 3rem;
-  color: #333;
 }

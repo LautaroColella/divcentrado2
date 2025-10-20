@@ -6,7 +6,7 @@ import type { SectionItem } from "../../components/LautaroSection.tsx";
 import LautaroSection from "../../components/LautaroSection.tsx";
 import MovieModal from "../../components/MovieModal";
 import PageTitle from "../../components/PageTitle";
-import SidebarPerfiles from "../../components/SidebarPerfiles";
+import Sidebar from "../../components/Sidebar.tsx";
 import "../../styles/profiles/lautaro.css";
 
 const Lautaro: React.FC = () => {
@@ -92,7 +92,7 @@ const Lautaro: React.FC = () => {
 
   return (
     <div className="d-flex flex-column justify-content-center align-items-center min-vh-100">
-      <SidebarPerfiles />
+      <Sidebar />
       <PageTitle title="Lautaro | DIVCENTRADO" />
       <div
         className="card profile-card shadow-lg"
