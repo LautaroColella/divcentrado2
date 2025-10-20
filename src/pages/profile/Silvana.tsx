@@ -10,13 +10,15 @@ import SilvanaAvatar from "../../components/SilvanaAvatar";
 import SilvanaPresentacion from "../../components/SilvanaPresentacion";
 import SilvanaDatos from "../../components/SilvanaDatos";
 import SilvanaBotonVolver from "../../components/SilvanaBotonVolver";
+import SidebarPerfiles from "../../components/SidebarPerfiles";
+import "../../styles/perfil.css";
 
 export default function Silvana() {
   const [modo, setModo] = useState<"suave" | "audaz">("suave");
   const [avatar, setAvatar] = useState(silvanaSuave);
 
   const alternarModo = () => {
-  setModo((prevModo) => (prevModo === "suave" ? "audaz" : "suave"));
+    setModo((prevModo) => (prevModo === "suave" ? "audaz" : "suave"));
   };
 
 
@@ -52,44 +54,47 @@ export default function Silvana() {
   };
 
   return (
-    <main className="presentacion">
-      <h1 className="frase-titulo">{contenido[modo].frase}</h1>
+    <> 
+      <SidebarPerfiles /> 
+      <main className="presentacion">
+        <h1 className="frase-titulo">{contenido[modo].frase}</h1>
 
-      <section className="seccion-central">
-        <SilvanaDatos
-          nombre={datos.nombre}
-          edad={datos.edad}
-          ubicacion={datos.ubicacion}
-        />
+        <section className="seccion-central">
+          <SilvanaDatos
+            nombre={datos.nombre}
+            edad={datos.edad}
+            ubicacion={datos.ubicacion}
+          />
 
-        <SilvanaAvatar
-        modo={modo}
-        imagen={avatar}
-        onMouseEnter={alternarModo}/>
+          <SilvanaAvatar
+            modo={modo}
+            imagen={avatar}
+            onMouseEnter={alternarModo} />
 
 
-        <SilvanaPresentacion texto={contenido[modo].presentacion} />
-      </section>
+          <SilvanaPresentacion texto={contenido[modo].presentacion} />
+        </section>
 
-      <section className="bloques-info">
-        <SilvanaBloque
-          titulo="Habilidades"
-          items={contenido[modo].habilidades}
-          tipo="bloque-habilidades"
-        />
-        <SilvanaBloque
-          titulo="Películas favoritas"
-          items={contenido[modo].peliculas}
-          tipo="bloque-peliculas"
-        />
-        <SilvanaBloque
-          titulo="Música favorita"
-          items={contenido[modo].musica}
-          tipo="bloque-musica"
-        />
-      </section>
+        <section className="bloques-info">
+          <SilvanaBloque
+            titulo="Habilidades"
+            items={contenido[modo].habilidades}
+            tipo="bloque-habilidades"
+          />
+          <SilvanaBloque
+            titulo="Películas favoritas"
+            items={contenido[modo].peliculas}
+            tipo="bloque-peliculas"
+          />
+          <SilvanaBloque
+            titulo="Música favorita"
+            items={contenido[modo].musica}
+            tipo="bloque-musica"
+          />
+        </section>
 
-      <SilvanaBotonVolver />
-    </main>
+        <SilvanaBotonVolver />
+      </main>
+    </>
   );
 }

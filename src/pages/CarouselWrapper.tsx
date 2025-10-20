@@ -5,13 +5,13 @@ import "../styles/carousel.css";
 
 import Bitacora from "../components/Bitacora";
 import Nombre from "../components/Nombre";
-import Perfil from "../components/Perfil";
+import SidebarPerfiles from "../components/SidebarPerfiles";
 import Trabajo from "../components/Trabajo";
 
 const slides = [
   { component: <Nombre />, path: "/nombre", title: "Portada | DIVCENTRADO" },
   { component: <Trabajo />, path: "/trabajo", title: "Proyecto | DIVCENTRADO" },
-  { component: <Perfil />, path: "/perfil", title: "Perfil | DIVCENTRADO" },
+  { component: <SidebarPerfiles />, path: "/perfil", title: "Perfil | DIVCENTRADO" },
   {
     component: <Bitacora />,
     path: "/bitacora",
