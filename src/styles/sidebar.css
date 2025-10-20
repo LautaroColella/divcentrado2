@@ -1,6 +1,6 @@
 .barra-superior {
   position: fixed;
-  top: -100px;
+  top: -500px;
   left: 0;
   width: 100%;
   background: linear-gradient(to right, #a2ffff, #ccffff);
