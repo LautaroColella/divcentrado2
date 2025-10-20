@@ -14,7 +14,7 @@
 ## 🚀 Proyecto Desplegado
 
 Puedes ver la última versión desplegada aquí:
-**[Publicación en Vercel](https://frontend-ifts.vercel.app/)**
+**[PONER EL LINK QUE CORRESPONDE!!!](https://frontend-ifts.vercel.app/)**
 
 ---
 
@@ -47,8 +47,7 @@ En este proyecto vas a conocernos más a fondo: quiénes somos, nuestros gustos 
 
 1.  **Clonar el repositorio:**
     ```bash
-    # Reemplaza la URL por la de tu repositorio (HTTPS o SSH)
-    git clone [https://github.com/tu-usuario/divcentrado2.git](https://github.com/tu-usuario/divcentrado2.git)
+    git clone https://github.com/LautaroColella/divcentrado2.git
     ```
 
 2.  **Navegar al directorio del proyecto:**
@@ -65,7 +64,7 @@ En este proyecto vas a conocernos más a fondo: quiénes somos, nuestros gustos 
     ```bash
     npm run dev
     ```
-    La aplicación estará disponible en `http://localhost:5173`
+    La aplicación estará disponible en la URL `http://localhost:5173`
 
 ### Otros Scripts
 
@@ -86,14 +85,16 @@ En este proyecto vas a conocernos más a fondo: quiénes somos, nuestros gustos 
 
 ## ✨ Funcionalidades Implementadas
 
-* **Navegación y Routing:** Uso de `React Router DOM` para la navegación fluida entre páginas y rutas dinámicas para los perfiles individuales.
 * **Carrusel Principal:** Componente `CarouselWrapper` que funciona como contenedor principal para navegar por las secciones.
 * **Componentes Interactivos:**
-    * **Portada (`Nombre`):** Componente SVG con texto centrado.
-    * **Trabajo:** Sistema de círculos con animaciones CSS (Flip, Ripple, Shrink) al hacer clic.
+    * **Circle:** Sistema de círculos con animaciones CSS (Flip, Ripple, Shrink) al hacer clic.
+    * **Sidebar** Barra de navegación superior para redirigirse a cada perfil.
 * **Perfiles Individuales:**
     * **Santiago:** Implementación de `TSParticles` con configuración dinámica para efectos de partículas.
-    * **Lautaro, Cristian, Paola, Silvana:** Estructura base preparada para el desarrollo futuro.
+    * **Lautaro** Se muestra un modal al hacer click en los botones de youtube.
+    * **Cristian** Animación Flip al hacer click en las tarjetas.
+    * **Paola** Cambio del fondo al hacer click en cambiar estilo, artistas o peliculas. Cambio de la foto de perfil al hacer click en cambiar foto.
+    * **Silvana** Cambios en toda la página al hoverear sobre la foto.
 * **Bitácora:** Sistema de logs y entradas para documentar el progreso.
 
 ---
