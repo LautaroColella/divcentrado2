@@ -2,7 +2,7 @@
    BASE CSS 
    ------------- */
 
-/* Reset básico */
+
 * {
   margin: 0;
   padding: 0;
@@ -82,10 +82,11 @@ main.presentacion {
 }
 
 .avatar-rectangular img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
+
 
 /* Datos personales */
 .info-lateral.izquierda {
