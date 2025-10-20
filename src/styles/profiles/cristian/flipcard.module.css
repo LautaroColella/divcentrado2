@@ -1,11 +1,11 @@
-.flip-card {
+:global(#profile-cristian) .flipCard {
   background: transparent;
   width: 100%;
   perspective: 1000px;
   cursor: pointer;
 }
 
-.flip-inner {
+:global(#profile-cristian) .flipInner {
   position: relative;
   width: 100%;
   min-height: 200px;
@@ -16,12 +16,12 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-.flip-card.flipped .flip-inner {
+:global(#profile-cristian) .flipped .flipInner {
   transform: rotateY(180deg);
 }
 
-.flip-front,
-.flip-back {
+:global(#profile-cristian) .flipFront,
+:global(#profile-cristian) .flipBack {
   position: absolute;
   inset: 0;
   border-radius: 10px;
@@ -32,22 +32,20 @@
   padding: 15px;
 }
 
-.flip-front {
+:global(#profile-cristian) .flipFront {
   background: linear-gradient(135deg, #003366, #0055aa);
   color: white;
 }
 
-.flip-back {
+:global(#profile-cristian) .flipBack {
   background: #f5f7fa;
   color: #222;
   transform: rotateY(180deg);
   flex-direction: column;
-}
-
-.flip-back {
   overflow: hidden;
 }
-.flip-back img {
+
+:global(#profile-cristian) .flipBack img {
   max-width: 100%;
   height: auto;
 }

@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import FlipCard from "../../components/CardCristian/FlipCard";
 import SocialGrid from "../../components/CardCristian/SocialGrid";
@@ -21,63 +22,71 @@ function FraseRotativa({ frases }: FraseRotativaProps) {
 
 export default function Cristian() {
   return (
-    <section className={styles.wrapper}>
+    <section id="profile-cristian" className={styles.page}>
       <PageTitle title="Cristian | DIVCENTRADO" />
-      {/* Bloque izquierdo */}
-      <aside className={styles.left}>
-        <div className={styles.fotoBox}>
-          {/*public/images/cristian.jpg */}
-          <img
-            src="..\..\src\assets\img\cristianSalchiantonio.jpg"
-            alt="H. Cristian Páez"
+      {/* Volver a portada (FUERA del wrapper) */}
+      <NavLink to="/nombre" className={styles.backBtn}>
+        ← Volver a la portada
+      </NavLink>
+
+      {/* Wrapper de dos columnas */}
+      <section className={styles.wrapper}>
+        {/* Bloque izquierdo */}
+        <aside className={styles.left}>
+          <div className={styles.fotoBox}>
+            <img
+              src="/src/assets/img/cristianSalchiantonio.jpg"
+              alt="H. Cristian Páez"
+            />
+          </div>
+          <h1 className={styles.title}>H. Cristian Páez</h1>
+          <p>
+            <strong>Ciudad:</strong> Tucumán
+          </p>
+          <p>
+            <strong>Edad:</strong> 32 años
+          </p>
+          <FraseRotativa
+            frases={[
+              "Lo importante es aprender cosas nuevas",
+              "Trabajar en equipo siempre suma",
+            ]}
           />
-        </div>
-        <h1 className={styles.title}>H. Cristian Páez</h1>
-        <p>
-          <strong>Ciudad:</strong> Tucumán
-        </p>
-        <p>
-          <strong>Edad:</strong> 32 años
-        </p>
-        <FraseRotativa
-          frases={[
-            "Lo importante es aprender cosas nuevas",
-            "Trabajar en equipo siempre suma",
-          ]}
-        />
-      </aside>
-      {/* Bloque derecho */}
-      <section className={styles.right}>
-        <FlipCard title="Habilidades">
-          <ul className={styles.list}>
-            <li>HTML &amp; CSS</li>
-            <li>JavaScript</li>
-            <li>ASP.NET Core</li>
-            <li>.NET MAUI</li>
-          </ul>
-        </FlipCard>
+        </aside>
 
-        <FlipCard title="Películas">
-          <ul className={styles.list}>
-            <li>Catch Me If You Can</li>
-            <li>Into the Wild</li>
-            <li>Mandarinas</li>
-            <li>7 Cajas</li>
-          </ul>
-        </FlipCard>
+        {/* Bloque derecho */}
+        <section className={styles.right}>
+          <FlipCard title="Habilidades">
+            <ul className={styles.list}>
+              <li>HTML &amp; CSS</li>
+              <li>JavaScript</li>
+              <li>ASP.NET Core</li>
+              <li>.NET MAUI</li>
+            </ul>
+          </FlipCard>
 
-        <FlipCard title="Música">
-          <ul className={styles.list}>
-            <li>Nirvana | Nevermind</li>
-            <li>Guns N' Roses | Use Your Illusion I</li>
-            <li>Oasis | Definitely Maybe</li>
-            <li>Cazuza | Só Se For A Dois</li>
-          </ul>
-        </FlipCard>
+          <FlipCard title="Películas">
+            <ul className={styles.list}>
+              <li>Catch Me If You Can</li>
+              <li>Into the Wild</li>
+              <li>Mandarinas</li>
+              <li>7 Cajas</li>
+            </ul>
+          </FlipCard>
 
-        <FlipCard title="Mis Redes">
-          <SocialGrid />
-        </FlipCard>
+          <FlipCard title="Música">
+            <ul className={styles.list}>
+              <li>Nirvana | Nevermind</li>
+              <li>Guns N' Roses | Use Your Illusion I</li>
+              <li>Oasis | Definitely Maybe</li>
+              <li>Cazuza | Só Se For A Dois</li>
+            </ul>
+          </FlipCard>
+
+          <FlipCard title="Mis Redes">
+            <SocialGrid />
+          </FlipCard>
+        </section>
       </section>
     </section>
   );

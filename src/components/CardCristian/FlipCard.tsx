@@ -1,25 +1,21 @@
 import React from "react";
-import "../../styles/profiles/cristian/flipcard.css";
+import s from "../../styles/profiles/cristian/flipcard.module.css";
 
-
-type Props = {
-  title: string;
-  children?: React.ReactNode;
-};
+type Props = { title: string; children?: React.ReactNode };
 
 export default function FlipCard({ title, children }: Props) {
   const [flipped, setFlipped] = React.useState(false);
 
   return (
     <div
-      className={`flip-card ${flipped ? "flipped" : ""}`}
+      className={`${s.flipCard} ${flipped ? s.flipped : ""}`}
       onClick={() => setFlipped(!flipped)}
     >
-      <div className="flip-inner">
-        <div className="flip-front">
+      <div className={s.flipInner}>
+        <div className={s.flipFront}>
           <h2>{title}</h2>
         </div>
-        <div className="flip-back">{children}</div>
+        <div className={s.flipBack}>{children}</div>
       </div>
     </div>
   );
