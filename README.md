@@ -13,8 +13,8 @@
 
 ## 🚀 Proyecto Desplegado
 
-Puedes ver la última versión desplegada aquí:
-**[PONER EL LINK QUE CORRESPONDE!!!](https://frontend-ifts.vercel.app/)**
+Se hizo el deploy en Vercel con el siguiente link:
+**[DIVCENTRADO](https://divcentrado2.vercel.app/)**
 
 ---
 
@@ -103,14 +103,20 @@ En este proyecto vas a conocernos más a fondo: quiénes somos, nuestros gustos 
 
 ```
 src/
-├── components/           # Componentes reutilizables
-│   ├── Bitacora.tsx     # Componente de bitácora
-│   ├── logentry.tsx     # Componente de entrada de log
-│   ├── nombre.tsx       # Componente de nombre/portada
-│   ├── Perfil.tsx       # Componente de perfil
-│   └── Trabajo.tsx      # Componente de trabajo
+├── components/               # Componentes reutilizables principales
+│   ├── CarouselWrapper.tsx   # Carrusel 
+│   ├── logentry.tsx          # Log de cada bitácora
+│   ├── Circle.tsx            # Círculos de la segunda slide
+│   ├── MovieModal.tsx        # Modal con información de película (API)
+│   └── PageTitle.tsx         # Titulo de cada página
+│   └── Project.tsx           # Proyecto de cada estudiante (JSON)
+│   └── Sidebar.tsx           # Quedaba mal una sidebar, es una navbar
 ├── pages/               # Páginas principales
-│   ├── CarouselWrapper.tsx  # Wrapper del carrusel principal
+│   ├── Bitacora.tsx     # Tercera slide con la bitácora
+│   ├── Nombre.tsx       # Primer slide con el nombre del equipo
+│   ├── NotFound.tsx     # Error 404 not found
+│   ├── Proyectos.tsx    # Proyectos de los estudiantes
+│   ├── Trabajo.tsx      # Segunda slide donde se ve la forma de trabajo
 │   └── profile/         # Páginas de perfiles individuales
 │       ├── Cristian.tsx
 │       ├── Lautaro.tsx
@@ -122,8 +128,10 @@ src/
 │   ├── bitacora.css
 │   ├── carousel.css
 │   ├── nombre.css
+│   ├── sidebar.css
+│   ├── proyecto.css
 │   └── trabajo.css
-├── assets/              # Recursos multimedia
+├── assets/             # Recursos multimedia
 │   └── img/            # Imágenes y iconos
 ├── types/              # Definiciones de tipos TypeScript
 ├── main.tsx           # Punto de entrada de la aplicación
